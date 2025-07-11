@@ -50,7 +50,7 @@
 					</button>
 					<a
 						href="/"
-						class=" phone:justify-center laptop:gap-x-11 phone:text-2xl flex text-xl leading-6 font-semibold text-gray-50"
+						class="phone:justify-center laptop:gap-x-11 phone:text-2xl flex min-w-full text-xl leading-6 font-semibold text-gray-50"
 						>P&E Consulting</a
 					>
 				</div>
