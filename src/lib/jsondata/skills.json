@@ -1,0 +1,26 @@
+[
+	{
+		"name": "JavaScript",
+		"level": "Intermediate"
+	},
+	{
+		"name": "TypeScript",
+		"level": "Intermediate"
+	},
+	{
+		"name": "Python",
+		"level": "Intermediate"
+	},
+	{
+		"name": "SQL",
+		"level": "Beginner"
+	},
+	{
+		"name": "HTML & CSS",
+		"level": "Intermediate"
+	},
+	{
+		"name": "SvelteKit",
+		"level": "Intermediate"
+	}
+]
