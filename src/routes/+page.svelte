@@ -25,9 +25,7 @@
 	<!-- <Header {tabs} /> -->
 	<div class="mx-auto max-w-[1120px] min-w-[400px] px-3">
 		<header class="inset-x-0 top-0 z-50 flex h-16 border-b border-gray-50">
-			<div
-				class="tablet:px-6 desktop:px-8 mx-auto flex w-full max-w-7xl items-center justify-between px-4"
-			>
+			<div class="mx-auto flex w-full max-w-7xl items-center justify-between">
 				<div class="flex flex-1 items-center gap-x-6">
 					<button
 						on:click={() => {
@@ -52,7 +50,7 @@
 					</button>
 					<a
 						href="/"
-						class="phone:justify-center laptop:gap-x-11 phone:text-2xl flex min-w-full text-xl leading-6 font-semibold text-gray-50"
+						class=" phone:justify-center laptop:gap-x-11 phone:text-2xl flex text-xl leading-6 font-semibold text-gray-50"
 						>P&E Consulting</a
 					>
 				</div>
