@@ -1,10 +1,10 @@
 <script lang="ts">
 	import CloseSVG from '$lib/components/SVGs/CloseSVG.svelte';
-	// import TabsUnderline from '$lib/components/TabsUnderline.svelte';
 	import { tabsObj } from '$lib/general/helpers';
 	import { showProj } from '$lib/stores/showProjStore';
 	import { onMount } from 'svelte';
-	import { fade, fly } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
+	import about from '$lib/jsondata/about.json';
 
 	let showMobileMenu: boolean = false;
 
@@ -148,42 +148,18 @@
 	</section>
 	<section>
 		<div class="mx-auto grid max-w-[1120px] min-w-[400px] grid-cols-3 gap-y-10 px-4">
-			<div class="col-span-3">
-				<p
-					class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-4xl mb-3 text-left text-2xl font-bold text-gray-700"
-				>
-					Our Mission
-				</p>
-				<p>
-					To provide data-driven, practical environmental consulting solutions that empower small-
-					and medium-sized businesses to operate sustainably, reduce harm, and comply with globally
-					recognized standards.
-				</p>
-			</div>
-			<div class="col-span-3">
-				<p
-					class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-4xl mb-3 text-left text-2xl font-bold text-gray-700"
-				>
-					Our Vision
-				</p>
-				<p>
-					To become a leading environmental think tank and consultancy, helping organizations
-					transition to greener practices and fostering sustainable growth within communities.
-				</p>
-			</div>
-			<div class="col-span-3">
-				<p
-					class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-4xl mb-3 text-left text-2xl font-bold text-gray-700"
-				>
-					Our Story
-				</p>
-				<p>
-					Founded in 2025 by Prince Pappoe, E.S. Consultancy was created to address a critical gap:
-					while large corporations have internal sustainability teams, SMEs often lack access to
-					specialized expertise. We aim to change that by providing realistic, impactful solutions
-					tailored to your business needs.
-				</p>
-			</div>
+			{#each Object.entries(about) as [title, description]}
+				<div class="col-span-3">
+					<p
+						class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-4xl mb-3 text-left text-2xl font-bold text-gray-700"
+					>
+						{title}
+					</p>
+					<p>
+						{description}
+					</p>
+				</div>
+			{/each}
 		</div>
 	</section>
 </div>

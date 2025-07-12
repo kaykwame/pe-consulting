@@ -1,3 +1,3 @@
 # pe-consulting
 
-P&amp;E Consulting website
+P&amp;E Consulting website.

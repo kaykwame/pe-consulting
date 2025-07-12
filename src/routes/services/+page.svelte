@@ -4,7 +4,7 @@
 	import { showProj } from '$lib/stores/showProjStore';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
-	import about from '$lib/jsondata/about.json';
+	import services from '$lib/jsondata/services.json';
 
 	let showMobileMenu: boolean = false;
 
@@ -20,8 +20,8 @@
 <div>
 	<section
 		in:fly={{ y: 150, duration: 1700 }}
-		class="phone:h-[20vh] tablet:h-[30vh] laptop:h-[40vh] desktop:h-[40vh] relative mb-12 h-[30vh] items-center justify-center space-y-12 bg-cover bg-center bg-no-repeat"
-		style="background-image: url('/images/header-hero-img-0.jpg');"
+		class="phone:h-[50vh] tablet:h-[60vh] laptop:h-[70vh] desktop:h-[70vh] relative mb-12 h-[60vh] items-center justify-center space-y-12 bg-cover bg-center bg-no-repeat"
+		style="background-image: url('/images/header-hero-img-3.jpg');"
 	>
 		<!-- <Header {tabs} /> -->
 		<div class="mx-auto max-w-[1120px] min-w-[400px] px-3">
@@ -121,18 +121,25 @@
 				}
 			</style>
 
-			<div class="">
+			<div class="flex justify-center">
 				<div
 					class="laptop:grid-cols-1 tablet:grid-cols-1 phone:grid-cols-1 desktop:mt-26 mt-10 grid"
 				>
 					<div
-						class="laptop:col-span-1 tablet:col-span-1 phone:grid-cols-1 flex items-center justify-start"
+						class="laptop:col-span-1 tablet:col-span-1 phone:grid-cols-1 flex items-center justify-center"
 					>
-						<h1
-							class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-5xl mb-6 text-left text-xl font-bold text-gray-50"
-						>
-							Contact Us
-						</h1>
+						<div class="mx-auto">
+							<h1
+								class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-5xl mb-6 text-left text-xl font-bold text-gray-50"
+							>
+								Our Services...
+							</h1>
+							<p class="desktop:text-base mx-auto font-mono text-sm text-wrap text-gray-50">
+								"Empowering a sustainable tomorrow through innovative, eco-conscious solutions that
+								prioritize environmental impact, resource efficiency, and long-term planetary
+								health."
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -140,17 +147,18 @@
 	</section>
 	<section>
 		<div class="mx-auto grid max-w-[1120px] min-w-[400px] grid-cols-3 gap-y-10 px-4">
-			<!-- <form class="col-span-3" method="POST" action="?/login">
-				<label>
-					Email
-					<input name="email" type="email" />
-				</label>
-				<label>
-					Message
-					<input name="password" type="text" />
-				</label>
-				<button>Send</button>
-			</form> -->
+			{#each Object.entries(services) as [service, description]}
+				<div class="col-span-3">
+					<p
+						class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-4xl mb-3 text-left text-2xl font-bold text-gray-700"
+					>
+						{service}
+					</p>
+					<p>
+						{description}
+					</p>
+				</div>
+			{/each}
 		</div>
 	</section>
 </div>
