@@ -5,7 +5,7 @@
 	const tabs: string[] = ['Skills', 'Experience', 'Education', 'Resume'];
 </script>
 
-<div class="app">
+<div class="app mb-10">
 	<!-- <Header {tabs} /> -->
 	<main class=" mx-auto h-full overflow-hidden overflow-x-hidden">
 		<div class="">

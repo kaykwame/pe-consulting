@@ -1,12 +1,10 @@
 <script lang="ts">
 	import Hero from '$lib/components/Hero.svelte';
 	import CloseSVG from '$lib/components/SVGs/CloseSVG.svelte';
-	import Projects from '$lib/components/Projects.svelte';
+	import { tabsObj } from '$lib/general/helpers';
 	import { showProj } from '$lib/stores/showProjStore';
 	import { onMount } from 'svelte';
 	let showMobileMenu: boolean = false;
-
-	const tabs: string[] = ['About Us', 'Contact'];
 
 	onMount(() => {
 		showProj.set(false);
@@ -55,13 +53,12 @@
 					>
 				</div>
 				<nav
-					class="laptop:flex laptop:gap-x-11 laptop:text-sm laptop:font-semibold laptop:leading-6 laptop:text-gray-700 hidden"
+					class="laptop:flex laptop:gap-x-11 laptop:text-sm laptop:font-semibold laptop:leading-6 laptop:text-gray-50 hidden"
 				>
-					{#each tabs as tab}
-						<a href="/{tab.toLocaleLowerCase()}">{tab}</a>
+					{#each Object.entries(tabsObj) as [key, tab]}
+						<a href="/{key.toLocaleLowerCase()}">{tab}</a>
 					{/each}
 				</nav>
-				<div class="flex flex-1 items-center justify-end gap-x-8"></div>
 			</div>
 			{#if showMobileMenu}
 				<!-- Mobile menu, show/hide based on menu open state. -->
@@ -91,9 +88,9 @@
 							</div>
 						</div>
 						<div class="mt-2 space-y-2">
-							{#each tabs as tab}
+							{#each Object.entries(tabsObj) as [key, tab]}
 								<a
-									href="/{tab.toLocaleLowerCase()}"
+									href="/{key.toLocaleLowerCase()}"
 									on:click={() => {
 										showMobileMenu = false;
 									}}
