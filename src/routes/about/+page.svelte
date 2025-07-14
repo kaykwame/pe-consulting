@@ -21,7 +21,7 @@
 	<section
 		in:fly={{ y: 150, duration: 1700 }}
 		class="phone:h-[50vh] tablet:h-[60vh] laptop:h-[70vh] desktop:h-[70vh] relative mb-12 h-[60vh] items-center justify-center space-y-12 bg-cover bg-center bg-no-repeat"
-		style="background-image: url('/images/header-hero-img-2.jpg');"
+		style="background-image: url('/images/header-hero-img-4.jpeg');"
 	>
 		<!-- <Header {tabs} /> -->
 		<div class="mx-auto max-w-[1120px] min-w-[400px] px-3">
