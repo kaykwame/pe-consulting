@@ -1,4 +1,5 @@
 <script lang="ts">
+	import WhiteButton from '$lib/components/buttons/WhiteButton.svelte';
 	import Hero from '$lib/components/Hero.svelte';
 	import CloseSVG from '$lib/components/SVGs/CloseSVG.svelte';
 	import { tabsObj } from '$lib/general/helpers';
@@ -20,7 +21,7 @@
 
 <section
 	in:fly={{ y: 150, duration: 1700 }}
-	class="phone:h-[50vh] tablet:h-[60vh] laptop:h-[70vh] desktop:h-[70vh] relative mb-12 h-[60vh] items-center justify-center space-y-12 bg-cover bg-center bg-no-repeat"
+	class="phone:h-[50vh] tablet:h-[60vh] laptop:h-[70vh] desktop:h-[70vh] relative h-[60vh] items-center justify-center space-y-12 bg-cover bg-center bg-no-repeat"
 	style="background-image: url('/images/header-hero-img-1.jpg');"
 >
 	<!-- <Header {tabs} /> -->
@@ -72,6 +73,57 @@
 		</style>
 
 		<Hero />
+	</div>
+</section>
+<section
+	class="phone:h-[50vh] tablet:h-[60vh] laptop:h-[70vh] desktop:h-[70vh] relative mb-12 h-[60vh] items-center justify-center space-y-12 bg-gray-50 bg-cover bg-center bg-no-repeat pt-8"
+>
+	<!-- <Header {tabs} /> -->
+	<div class="mx-auto max-w-[1120px] min-w-[400px] px-3">
+		<header class="inset-x-0 top-0 z-50 flex h-16 border-b border-gray-50">
+			<div class="mx-auto flex w-full max-w-7xl items-center justify-between">
+				<div class="mx-auto flex items-center justify-center gap-x-5">
+					<WhiteButton rounded={false} buttonSize="xl">Get Stated Today</WhiteButton>
+					<WhiteButton rounded={false} buttonSize="xl">Learn More About Our Services</WhiteButton>
+				</div>
+			</div>
+		</header>
+
+		<style>
+			#myname {
+				font-family: 'Brush Script MT', cursive;
+			}
+		</style>
+
+		<div class="">
+			<div
+				class="laptop:grid-cols-1 tablet:grid-cols-1 phone:grid-cols-1 laptop:mt-10 tablet:mt-7 phone:mt-4 grid"
+			>
+				<div
+					class="laptop:col-span-1 tablet:col-span-1 phone:grid-cols-1 flex items-center justify-center"
+				>
+					<div class="">
+						<h1
+							class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-5xl mb-6 text-left text-xl font-bold text-gray-800"
+						>
+							About Us...
+						</h1>
+						<p class="desktop:text-base font-mono text-sm text-wrap text-gray-800">
+							Founded by Prince Pappoe with the assistance of well experienced associates in the E.U
+							and north America, P&amp;E.
+						</p>
+						<p class="desktop:text-base font-mono text-sm text-wrap text-gray-800">
+							Consultancy is dedicated to making sustainability accessible for every business,
+							bridging the gap between environmental and operational goals.
+						</p>
+
+						<p class="desktop:text-base font-mono text-sm text-wrap text-gray-800">
+							<a class=" text-blue-200 underline" href="#">Read more about us here...</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </section>
 {#if showMobileMenu}
