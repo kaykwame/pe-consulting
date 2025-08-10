@@ -93,7 +93,7 @@
 							<div class="mt-2 space-y-2">
 								{#each Object.entries(tabsObj) as [key, tab]}
 									<a
-										href="/{key.toLocaleLowerCase()}"
+										href="/{tab == 'Home' ? '' : key.toLocaleLowerCase()}"
 										on:click={() => {
 											showMobileMenu = false;
 										}}
@@ -101,14 +101,14 @@
 										>{tab}</a
 									>
 								{/each}
-								<a
+								<!-- <a
 									href="/"
 									on:click={() => {
 										showMobileMenu = false;
 									}}
 									class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 font-semibold text-gray-900 hover:bg-gray-50"
 									>Home</a
-								>
+								> -->
 							</div>
 						</div>
 					</div>
