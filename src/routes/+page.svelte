@@ -43,6 +43,8 @@
 							viewBox="0 0 20 20"
 							fill="currentColor"
 							aria-hidden="true"
+							stroke="currentColor"
+							stroke-width="1"
 						>
 							<path
 								fill-rule="evenodd"
