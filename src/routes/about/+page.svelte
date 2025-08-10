@@ -59,7 +59,7 @@
 						class="laptop:flex laptop:gap-x-11 laptop:text-sm laptop:font-semibold laptop:leading-6 laptop:text-gray-50 hidden"
 					>
 						{#each Object.entries(tabsObj) as [key, tab]}
-							<a href="/{key.toLocaleLowerCase()}">{tab}</a>
+							<a href="/{tab == 'Home' ? '' : key.toLocaleLowerCase()}">{tab}</a>
 						{/each}
 					</nav>
 				</div>

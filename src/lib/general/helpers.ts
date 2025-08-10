@@ -1,4 +1,5 @@
 export const tabsObj = {
+	home: 'Home',
 	services: 'Our Services',
 	about: 'About Us',
 	contact: 'Contact'

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import WhiteButton from '$lib/components/buttons/WhiteButton.svelte';
 	import Hero from '$lib/components/Hero.svelte';
 	import CloseSVG from '$lib/components/SVGs/CloseSVG.svelte';
@@ -60,7 +61,7 @@
 					class="laptop:flex laptop:gap-x-11 laptop:text-sm laptop:font-semibold laptop:leading-6 laptop:text-gray-50 hidden"
 				>
 					{#each Object.entries(tabsObj) as [key, tab]}
-						<a href="/{key.toLocaleLowerCase()}">{tab}</a>
+						<a href="/{tab == 'Home' ? '' : key.toLocaleLowerCase()}">{tab}</a>
 					{/each}
 				</nav>
 			</div>
@@ -76,7 +77,7 @@
 	</div>
 </section>
 <section
-	class="phone:h-[50vh] tablet:h-[60vh] laptop:h-[70vh] desktop:h-[70vh] relative mb-12 h-[60vh] items-center justify-center space-y-12 bg-gray-50 bg-cover bg-center bg-no-repeat pt-8"
+	class="phone:h-[50vh] tablet:h-[60vh] laptop:h-[70vh] desktop:h-[70vh] relative h-[60vh] items-center justify-center space-y-12 bg-gray-50 bg-cover bg-center bg-no-repeat pt-8"
 >
 	<!-- <Header {tabs} /> -->
 	<div class="mx-auto max-w-[1120px] min-w-[400px] px-3">
@@ -84,7 +85,9 @@
 			<div class="mx-auto flex w-full max-w-7xl items-center justify-between">
 				<div class="mx-auto flex items-center justify-center gap-x-5">
 					<WhiteButton rounded={false} buttonSize="xl">Get Stated Today</WhiteButton>
-					<WhiteButton rounded={false} buttonSize="xl">Learn More About Our Services</WhiteButton>
+					<WhiteButton on:click={() => goto('/services')} rounded={false} buttonSize="xl"
+						>Learn More About Our Services</WhiteButton
+					>
 				</div>
 			</div>
 		</header>
@@ -118,7 +121,7 @@
 						</p>
 
 						<p class="desktop:text-base font-mono text-sm text-wrap text-gray-800">
-							<a class=" text-blue-200 underline" href="#">Read more about us here...</a>
+							<a class=" text-blue-200 underline" href="/about">Read more about us here...</a>
 						</p>
 					</div>
 				</div>
