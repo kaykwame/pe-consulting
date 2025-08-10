@@ -58,8 +58,8 @@
 			<div
 				class="mt-2 flex flex-col justify-center space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4"
 			>
-				<a href="/privacy" class="hover:underline">Privacy Policy</a>
-				<a href="/terms" class="hover:underline">Terms of Service</a>
+				<a href="#" class="hover:underline">Privacy Policy</a>
+				<a href="#" class="hover:underline">Terms of Service</a>
 			</div>
 		</div>
 	</div>
