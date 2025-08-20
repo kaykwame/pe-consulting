@@ -1,10 +1,9 @@
 <script lang="ts">
 	import CloseSVG from '$lib/components/SVGs/CloseSVG.svelte';
-	import { tabsObj } from '$lib/general/helpers';
+	import { services, tabsObj } from '$lib/general/helpers';
 	import { showProj } from '$lib/stores/showProjStore';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
-	import services from '$lib/jsondata/services.json';
 
 	let showMobileMenu: boolean = false;
 
@@ -147,7 +146,7 @@
 	</section>
 	<section>
 		<div class="mx-auto grid max-w-[1120px] min-w-[400px] grid-cols-3 gap-y-10 px-4">
-			{#each Object.entries(services) as [service, description]}
+			{#each Object.entries(services) as [service, value]}
 				<div class="col-span-3">
 					<p
 						class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-4xl mb-3 text-left text-2xl font-bold text-gray-700"
@@ -155,7 +154,7 @@
 						{service}
 					</p>
 					<p>
-						{description}
+						{value.description_text}
 					</p>
 				</div>
 			{/each}

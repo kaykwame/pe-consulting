@@ -12,12 +12,13 @@
 					class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-5xl mb-6 text-left text-xl font-bold text-gray-50"
 				>
 					Empowering Your Business for a Sustainable Future
+					<!-- We empower businesses, organizations, and communities to achieve sustainability goals through
+					innovative yet practical solutions tailored to their unique challenges. -->
 				</h1>
-				<p class="desktop:text-base mx-auto font-mono text-sm text-wrap text-gray-50">
-					At P&amp;E. Consultancy, we help organisations (small and medium-sized businesses) reduce
-					their environmental impact, achieve compliance, and build brand value through practical,
-					data-driven sustainability solutions.
-				</p>
+				<!-- <p class="desktop:text-base mx-auto font-mono text-sm text-wrap text-gray-50">
+					We empower businesses, organizations, and communities to achieve sustainability goals
+					through innovative yet practical solutions tailored to their unique challenges.
+				</p> -->
 			</div>
 		</div>
 	</div>

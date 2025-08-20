@@ -3,7 +3,8 @@
 	import WhiteButton from '$lib/components/buttons/WhiteButton.svelte';
 	import Hero from '$lib/components/Hero.svelte';
 	import CloseSVG from '$lib/components/SVGs/CloseSVG.svelte';
-	import { tabsObj } from '$lib/general/helpers';
+	import EmptyImageSvg from '$lib/components/SVGs/EmptyImageSVG.svelte';
+	import { services, tabsObj } from '$lib/general/helpers';
 	import { showProj } from '$lib/stores/showProjStore';
 	import { onMount } from 'svelte';
 	import { fade, fly } from 'svelte/transition';
@@ -68,18 +69,11 @@
 				</nav>
 			</div>
 		</header>
-
-		<style>
-			#myname {
-				font-family: 'Brush Script MT', cursive;
-			}
-		</style>
-
 		<Hero />
 	</div>
 </section>
 <section
-	class="phone:h-[50vh] tablet:h-[60vh] laptop:h-[70vh] desktop:h-[70vh] relative h-[60vh] items-center justify-center space-y-12 bg-gray-50 bg-cover bg-center bg-no-repeat pt-8"
+	class="phone:h-[50vh] tablet:h-[50vh] laptop:h-[50vh] desktop:h-[50vh] relative h-[50vh] items-center justify-center space-y-12 bg-gray-50 bg-cover bg-center bg-no-repeat pt-8"
 >
 	<!-- <Header {tabs} /> -->
 	<div class="mx-auto max-w-[1120px] min-w-[400px] px-3">
@@ -93,13 +87,6 @@
 				</div>
 			</div>
 		</header>
-
-		<style>
-			#myname {
-				font-family: 'Brush Script MT', cursive;
-			}
-		</style>
-
 		<div class="">
 			<div
 				class="laptop:grid-cols-1 tablet:grid-cols-1 phone:grid-cols-1 laptop:mt-10 tablet:mt-7 phone:mt-4 grid"
@@ -131,13 +118,49 @@
 		</div>
 	</div>
 </section>
+<section
+	class="relative items-center justify-center space-y-12 bg-gray-50 bg-cover bg-center bg-no-repeat pt-8"
+>
+	<div class="mx-auto max-w-[1120px] min-w-[300px] px-3">
+		<div>
+			<div
+				class="laptop:mt-10 tablet:mt-7 phone:mt-4 phone:grid-cols-1 tablet:grid-cols-2
+					laptop:grid-cols-3 desktop:grid-cols-3 grid gap-y-8 px-9"
+			>
+				<h1
+					class="phone:text-2xl tablet:text-3xl laptop:text-4xl desktop:text-5xl col-span-full mb-6 text-left font-bold text-gray-800"
+				>
+					Quick Highlights:
+				</h1>
+				{#each Object.entries(services) as [service, value]}
+					<div class="">
+						<div class="mb-2 flex w-full justify-center">
+							<div
+								class="phone:h-36 phone:w-full tablet:h-44 tablet:w-4/5 laptop:h-48 laptop:w-4/5 desktop:h-52
+									desktop:w-4/5 flex items-center justify-center rounded-sm bg-gray-300 text-center dark:bg-gray-700"
+							>
+								<EmptyImageSvg />
+							</div>
+						</div>
+						<div class="tablet:w-4/5 laptop:w-4/5 desktop:w-4/5 mx-auto mb-8 w-full">
+							<div class="mb-2 text-center font-bold text-gray-700">
+								{service}
+							</div>
+							<p class="text-center text-gray-500">{value.description_text}</p>
+						</div>
+					</div>
+				{/each}
+			</div>
+		</div>
+	</div>
+</section>
 {#if showMobileMenu}
 	<!-- Mobile menu, show/hide based on menu open state. -->
 	<div class="tablet:hidden" role="dialog" aria-modal="true">
 		<!-- Background backdrop, show/hide based on slide-over state. -->
-		<div class="fixed inset-0 z-50"></div>
+		<div class="z-50"></div>
 		<div
-			class="tablet:max-w-sm tablet:px-6 tablet:ring-1 tablet:ring-gray-900 fixed inset-y-0 left-0 z-50 w-full overflow-y-auto bg-white px-4 pb-6"
+			class="tablet:max-w-sm tablet:px-6 tablet:ring-1 tablet:ring-gray-900 left-0 z-50 w-full overflow-y-auto bg-white px-4 pb-6"
 		>
 			<div class="-ml-0.5 flex h-16 items-center gap-x-6">
 				<!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -169,21 +192,7 @@
 						>{tab}</a
 					>
 				{/each}
-				<!-- <a
-					href="/"
-					on:click={() => {
-						showMobileMenu = false;
-					}}
-					class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 font-semibold text-gray-900 hover:bg-gray-50"
-					>Home</a
-				> -->
 			</div>
 		</div>
 	</div>
 {/if}
-
-<style>
-	#myname {
-		/* font-family: 'Brush Script MT', cursive; */
-	}
-</style>
