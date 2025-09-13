@@ -129,16 +129,18 @@
 						class="laptop:col-span-1 tablet:col-span-1 phone:grid-cols-1 flex items-center justify-center"
 					>
 						<div class="mx-auto">
-							<h1
-								class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-5xl mb-6 text-left text-xl font-bold text-gray-50"
+							<h4
+								class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-3xl mb-6 text-left text-xl font-bold text-gray-50"
 							>
 								About Us
-							</h1>
-							<p class="desktop:text-base mx-auto font-mono text-sm text-wrap text-gray-50">
-								Founded by Prince Pappoe with the assistance of well experienced associates in the
-								E.U and north America, P&amp;E. Consultancy is dedicated to making sustainability
-								accessible for every business, bridging the gap between environmental and
-								operational goals.
+							</h4>
+							<p
+								class="phone:text-xl tablet:text-xl laptop:text-xl desktop:text-xl mx-auto font-mono text-sm text-wrap text-gray-50"
+							>
+								P&amp;E Consulting LLC is a sustainability-focused firm dedicated to guiding clients
+								toward environmentally responsible practices that also deliver measurable business
+								value. Founded by professionals with international experience across engineering,
+								business, and sustainability, we blend technical knowledge with practical solutions.
 							</p>
 						</div>
 					</div>
@@ -146,18 +148,20 @@
 			</div>
 		</div>
 	</section>
-	<section>
+	<section class="mb-10">
 		<div class="mx-auto grid max-w-[1120px] min-w-[400px] grid-cols-3 gap-y-10 px-4">
 			{#each Object.entries(about) as [title, description]}
 				<div class="col-span-3">
 					<p
-						class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-4xl mb-3 text-left text-2xl font-bold text-gray-700"
+						class="phone:text-2xl tablet:text-2xl laptop:text-2xl desktop:text-3xl mb-3 text-center text-2xl font-bold text-gray-700"
 					>
 						{title}
 					</p>
-					<p>
-						{description}
-					</p>
+					<div class="flex justify-center text-center">
+						<p class=" max-w-[500px] text-center">
+							{description}
+						</p>
+					</div>
 				</div>
 			{/each}
 		</div>

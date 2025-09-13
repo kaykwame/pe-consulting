@@ -57,7 +57,7 @@
 					<a
 						href="/"
 						class="laptop:gap-x-11 phone:text-2xl flex min-w-full text-xl leading-6 font-semibold text-gray-50"
-						>P&E Consulting</a
+						>P&E CONSULTING LLC</a
 					>
 				</div>
 				<nav
@@ -96,9 +96,9 @@
 				>
 					<div class="">
 						<h1
-							class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-5xl mb-6 text-left text-xl font-bold text-gray-800"
+							class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-4xl mb-6 text-left text-xl font-bold text-gray-800"
 						>
-							About Us...
+							About Us
 						</h1>
 						<p class="desktop:text-base font-mono text-sm text-wrap text-gray-800">
 							Founded by Prince Pappoe with the assistance of well experienced associates in the E.U
@@ -128,9 +128,9 @@
 					laptop:grid-cols-3 desktop:grid-cols-3 grid gap-y-8 px-9"
 			>
 				<h1
-					class="phone:text-2xl tablet:text-3xl laptop:text-4xl desktop:text-5xl col-span-full mb-6 text-left font-bold text-gray-800"
+					class="phone:text-2xl tablet:text-3xl laptop:text-4xl desktop:text-4xl col-span-full mb-6 text-left font-bold text-gray-800"
 				>
-					Quick Highlights:
+					Quick Highlights
 				</h1>
 				{#each Object.entries(services) as [service, value]}
 					<div class="">
@@ -139,14 +139,26 @@
 								class="phone:h-36 phone:w-full tablet:h-44 tablet:w-4/5 laptop:h-48 laptop:w-4/5 desktop:h-52
 									desktop:w-4/5 flex items-center justify-center rounded-sm bg-gray-300 text-center dark:bg-gray-700"
 							>
-								<EmptyImageSvg />
+								{#if value.image != ''}
+									<img
+										src={`/images/services/${value.image}`}
+										alt={service}
+										class="h-full w-full object-cover"
+									/>
+								{:else}
+									<EmptyImageSvg />
+								{/if}
 							</div>
 						</div>
 						<div class="tablet:w-4/5 laptop:w-4/5 desktop:w-4/5 mx-auto mb-8 w-full">
-							<div class="mb-2 text-center font-bold text-gray-700">
+							<div class="mb-2 text-center font-bold text-gray-900">
 								{service}
 							</div>
-							<p class="text-center text-gray-500">{value.description_text}</p>
+							<ul class="list-inside list-disc text-sm text-gray-800">
+								{#each value.description_text as text}
+									<li class="py-1">{text}</li>
+								{/each}
+							</ul>
 						</div>
 					</div>
 				{/each}
