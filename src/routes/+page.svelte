@@ -156,7 +156,12 @@
 							</div>
 							<ul class="list-inside list-disc text-sm text-gray-800">
 								{#each value.description_text as text}
-									<li class="py-1">{text}</li>
+									<li
+										class="py-1 pl-2 text-justify"
+										style="text-indent: -1em; padding-left: 1.5em;"
+									>
+										{text}
+									</li>
 								{/each}
 							</ul>
 						</div>
