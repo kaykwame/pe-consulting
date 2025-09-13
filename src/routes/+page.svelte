@@ -54,16 +54,11 @@
 							/>
 						</svg>
 					</button>
-					<div class="flex items-center gap-x-1">
-						<a
-							href="/"
-							class="laptop:gap-x-11 phone:text-2xl text-5xl leading-6 font-bold text-gray-50"
-							>P&E Consulting LLC
-						</a>
-						<!-- <p class=" text-base font-semibold text-gray-50">
-							– Practical Sustainability Solutions for a Better Future
-						</p> -->
-					</div>
+					<a
+						href="/"
+						class="laptop:gap-x-11 phone:text-2xl flex min-w-full text-xl leading-6 font-semibold text-gray-50"
+						>P&E CONSULTING LLC</a
+					>
 				</div>
 				<nav
 					class="laptop:flex laptop:gap-x-11 laptop:text-sm laptop:font-semibold laptop:leading-6 laptop:text-gray-50 hidden"
@@ -78,7 +73,7 @@
 	</div>
 </section>
 <section
-	class="phone:h-[50vh] tablet:h-[50vh] laptop:h-[50vh] desktop:h-[50vh] relative h-[50vh] items-center justify-center space-y-12 bg-gray-50 bg-cover bg-center bg-no-repeat pt-8"
+	class="phone:h-[37vh] tablet:h-[50vh] laptop:h-[50vh] desktop:h-[50vh] relative h-[50vh] items-center justify-center space-y-12 bg-gray-50 bg-cover bg-center bg-no-repeat pt-8"
 >
 	<!-- <Header {tabs} /> -->
 	<div class="mx-auto max-w-[1120px] min-w-[400px] px-3">
@@ -92,20 +87,20 @@
 				</div>
 			</div>
 		</header>
-		<div class="min-w-full">
+		<div class="">
 			<div
-				class="laptop:grid-cols-1 tablet:grid-cols-1 phone:grid-cols-1 laptop:mt-10 tablet:mt-7 phone:mt-4 grid min-w-full"
+				class="laptop:grid-cols-1 tablet:grid-cols-1 phone:grid-cols-1 laptop:mt-10 tablet:mt-7 phone:mt-4 grid"
 			>
 				<div
-					class="laptop:col-span-1 tablet:col-span-1 phone:grid-cols-1 flex min-w-full items-center justify-center"
+					class="laptop:col-span-1 tablet:col-span-1 phone:grid-cols-1 flex items-center justify-center"
 				>
-					<div class="min-w-full">
+					<div class="">
 						<h1
-							class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-3xl mb-4 text-left text-xl font-bold text-gray-800"
+							class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-4xl mb-2 text-left text-xl font-bold text-gray-800"
 						>
 							Our Story
 						</h1>
-						<p class="font-mono text-sm text-wrap text-gray-800">
+						<p class="desktop:text-base font-mono text-sm text-wrap text-gray-800">
 							Founded in 2025 by Prince Pappoe, P&E Consulting was created to address a critical
 							gap: Our team is made of brilliant individuals with years of experience in
 							engineering, environmental and business world and noticed that while large
@@ -116,9 +111,9 @@
 						<!-- <p class="desktop:text-base font-mono text-sm text-wrap text-gray-800">
 							Consultancy is dedicated to making sustainability accessible for every business,
 							bridging the gap between environmental and operational goals.
-						</p> -->
+						</p>
 
-						<!-- <p class="desktop:text-base font-mono text-sm text-wrap text-gray-800">
+						<p class="desktop:text-base font-mono text-sm text-wrap text-gray-800">
 							<a class=" text-blue-200 underline" href="/about">Read more about us here...</a>
 						</p> -->
 					</div>
@@ -132,15 +127,15 @@
 >
 	<div class="mx-auto max-w-[1120px] min-w-[300px] px-3">
 		<div>
+			<h1
+				class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-4xl mb-6 text-left text-xl font-bold text-gray-800"
+			>
+				Quick Highlights
+			</h1>
 			<div
 				class=" phone:grid-cols-1 tablet:grid-cols-2
 					laptop:grid-cols-3 desktop:grid-cols-3 grid gap-y-8"
 			>
-				<h1
-					class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-3xl col-span-3 mb-0 text-left text-xl font-bold text-gray-800"
-				>
-					Quick Highlights
-				</h1>
 				{#each Object.entries(services) as [service, value]}
 					<div class="">
 						<div class="mb-2 flex w-full justify-center">
