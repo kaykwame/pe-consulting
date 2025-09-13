@@ -125,7 +125,7 @@
 		<div>
 			<div
 				class="laptop:mt-10 tablet:mt-7 phone:mt-4 phone:grid-cols-1 tablet:grid-cols-2
-					laptop:grid-cols-3 desktop:grid-cols-3 grid gap-y-8 px-9"
+					laptop:grid-cols-3 desktop:grid-cols-3 grid gap-y-8"
 			>
 				<h1
 					class="phone:text-2xl tablet:text-3xl laptop:text-4xl desktop:text-4xl col-span-full mb-6 text-left font-bold text-gray-800"
