@@ -150,7 +150,7 @@
 								{/if}
 							</div>
 						</div>
-						<div class="tablet:w-4/5 laptop:w-4/5 desktop:w-4/5 mx-auto mb-8 w-full">
+						<div class="tablet:w-4/5 laptop:w-4/5 desktop:w-4/5 mx-auto mb-0 w-full">
 							<div class="mb-2 text-center font-bold text-gray-900">
 								{service}
 							</div>
