@@ -150,15 +150,16 @@
 								{/if}
 							</div>
 						</div>
-						<div class="tablet:w-4/5 laptop:w-4/5 desktop:w-4/5 mx-auto mb-0 w-full">
-							<div class="mb-2 text-center font-bold text-gray-900">
+						<div class="tablet:w-4/5 laptop:w-4/5 desktop:w-4/5 mx-auto mb-2 w-full">
+							<div class="mb-1 text-center font-bold text-gray-900">
 								{service}
 							</div>
-							<ul class="list-inside list-disc text-sm text-gray-800">
-								{#each value.description_text as text}
-									<li class="py-1">{text}</li>
-								{/each}
-							</ul>
+							<!-- <ul class="list-inside list-disc text-sm text-gray-800"> -->
+							{#each value.description_text as text}
+								<!-- <li class="py-1">{text}</li> -->
+								<p class="py-1 text-sm text-gray-800">{text}</p>
+							{/each}
+							<!-- </ul> -->
 						</div>
 					</div>
 				{/each}
