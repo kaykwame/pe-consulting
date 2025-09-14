@@ -94,7 +94,7 @@
 		</header>
 		<div class="">
 			<div
-				class="laptop:grid-cols-4 tablet:grid-cols-4 phone:grid-cols-4 laptop:mt-10 tablet:mt-7 phone:mt-4 grid"
+				class="phone:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 desktop:grid-cols-4 laptop:mt-10 tablet:mt-7 phone:mt-4 grid"
 			>
 				<div class="col-span-4">
 					<h1
@@ -104,23 +104,21 @@
 					</h1>
 				</div>
 				<div
-					class="laptop:col-span-3 tablet:col-span-3 phone:grid-cols-3 mr-8 flex items-center justify-center"
+					class="phone:col-span-1 tablet:col-span-2 laptop:col-span-3 desktop:col-span-3 mr-8 flex items-center justify-center"
 				>
 					<div>
-						<div>
-							<p class="desktop:text-base font-mono text-sm text-wrap text-gray-700">
-								Founded in 2025 by Prince Pappoe, P&E Consulting was created to address a critical
-								gap: Our team is made of brilliant individuals with years of experience in
-								engineering, environmental and business world and noticed that while large
-								corporations have internal sustainability teams, SMEs often lack access to
-								specialized expertise. We aim to change that by providing realistic, impactful
-								solutions tailored to your business needs.
-							</p>
-						</div>
+						<p class="desktop:text-base font-mono text-sm text-wrap text-gray-700">
+							Founded in 2025 by Prince Pappoe, P&E Consulting was created to address a critical
+							gap: Our team is made of brilliant individuals with years of experience in
+							engineering, environmental and business world and noticed that while large
+							corporations have internal sustainability teams, SMEs often lack access to specialized
+							expertise. We aim to change that by providing realistic, impactful solutions tailored
+							to your business needs.
+						</p>
 					</div>
 				</div>
 				<div
-					class="laptop:col-span-1 tablet:col-span-1 phone:grid-cols-1 flex items-center justify-center"
+					class="tablet:col-span-1 laptop:col-span-1 desktop:col-span-1 tablet:flex hidden items-center justify-center"
 				>
 					<div class="flex h-full w-full items-center justify-center">
 						<img
@@ -135,7 +133,7 @@
 	</div>
 </section>
 <section
-	class="relative items-center justify-center space-y-12 bg-gray-50 bg-cover bg-center bg-no-repeat pt-8 pb-6"
+	class="relative items-center justify-center space-y-12 bg-gray-50 bg-cover bg-center bg-no-repeat pt-8 pb-28"
 >
 	<div class="mx-auto max-w-[1120px] min-w-[300px] px-3">
 		<div>
