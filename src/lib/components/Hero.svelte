@@ -9,7 +9,7 @@
 		>
 			<div class="mx-auto">
 				<h4
-					class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-3xl mb-6 text-left text-xl font-bold text-gray-50"
+					class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-3xl mb-10 text-left text-xl font-bold text-gray-50"
 				>
 					Empowering Your Business for a Sustainable Future...
 					<!-- We empower businesses, organizations, and communities to achieve sustainability goals through
