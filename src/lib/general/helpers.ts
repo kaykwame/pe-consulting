@@ -5,6 +5,29 @@ export const tabsObj = {
 	contact: 'Contact'
 };
 
+export const heroText: Record<string, { title: string; description: string }> = {
+	home: {
+		title: 'Empowering Your Business for a Sustainable Future...',
+		description:
+			'We empower businesses, organizations, and communities to achieve sustainability goals through innovative yet practical solutions tailored to their unique challenges.'
+	},
+	services: {
+		title: 'Our Services',
+		description:
+			'We provide a comprehensive range of sustainability consulting services designed to help clients comply with regulations, reduce environmental impact, and capture new opportunities'
+	},
+	about: {
+		title: 'Who We Are:',
+		description:
+			'P&E Consulting LLC is a sustainability-focused firm dedicated to guiding clients toward environmentally responsible practices that also deliver measurable business value. Founded by professionals with international experience across engineering, business, and sustainability, we blend technical knowledge with practical solutions.'
+	},
+	contact: {
+		title: 'Get in Touch',
+		description:
+			'We would love to hear from you! Whether you have questions about our services, want to discuss a potential project, or just want to say hello, feel free to reach out.'
+	}
+};
+
 // export const services = {
 // 	'Life Cycle Assessments (LCA)':
 // 		'Analyze the environmental impact of your products or services from creation to disposal to make informed, sustainable decisions.',

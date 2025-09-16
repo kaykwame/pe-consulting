@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
+	import Hero from '$lib/components/Hero.svelte';
 	import CloseSVG from '$lib/components/SVGs/CloseSVG.svelte';
 	import { services, tabsObj } from '$lib/general/helpers';
 	import { showProj } from '$lib/stores/showProjStore';
@@ -48,10 +50,10 @@
 								/>
 							</svg>
 						</button>
-						<a
-							href="/"
-							class="laptop:gap-x-11 phone:text-2xl flex min-w-full text-xl leading-6 font-semibold text-gray-50"
-							>P&E Consulting</a
+						<button
+							on:click={() => goto('/')}
+							class="laptop:gap-x-11 phone:text-2xl flex min-w-full text-xl leading-6 font-bold text-gray-50"
+							>P&E Consulting LLC</button
 						>
 					</div>
 					<nav
@@ -100,48 +102,18 @@
 										>{tab}</a
 									>
 								{/each}
-								<!-- <a
-									href="/"
-									on:click={() => {
-										showMobileMenu = false;
-									}}
-									class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 font-semibold text-gray-900 hover:bg-gray-50"
-									>Home</a
-								> -->
 							</div>
 						</div>
 					</div>
 				{/if}
 			</header>
+			<Hero pageTitle="services" />
 
 			<style>
 				#myname {
 					font-family: 'Brush Script MT', cursive;
 				}
 			</style>
-
-			<div class="flex justify-center">
-				<div
-					class="laptop:grid-cols-1 tablet:grid-cols-1 phone:grid-cols-1 desktop:mt-26 mt-10 grid"
-				>
-					<div
-						class="laptop:col-span-1 tablet:col-span-1 phone:grid-cols-1 flex items-center justify-center"
-					>
-						<div class="mx-auto">
-							<h1
-								class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-5xl mb-6 text-left text-xl font-bold text-gray-50"
-							>
-								Our Services...
-							</h1>
-							<p class="desktop:text-base mx-auto font-mono text-sm text-wrap text-gray-50">
-								"Empowering a sustainable tomorrow through innovative, eco-conscious solutions that
-								prioritize environmental impact, resource efficiency, and long-term planetary
-								health."
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</section>
 	<section>

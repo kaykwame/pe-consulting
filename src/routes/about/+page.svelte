@@ -5,6 +5,8 @@
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import about from '$lib/jsondata/about.json';
+	import { goto } from '$app/navigation';
+	import Hero from '$lib/components/Hero.svelte';
 
 	let showMobileMenu: boolean = false;
 
@@ -49,10 +51,10 @@
 								/>
 							</svg>
 						</button>
-						<a
-							href="/"
-							class="laptop:gap-x-11 phone:text-2xl flex min-w-full text-xl leading-6 font-semibold text-gray-50"
-							>P&E Consulting</a
+						<button
+							on:click={() => goto('/')}
+							class="laptop:gap-x-11 phone:text-2xl flex min-w-full text-xl leading-6 font-bold text-gray-50"
+							>P&E Consulting LLC</button
 						>
 					</div>
 					<nav
@@ -114,38 +116,13 @@
 					</div>
 				{/if}
 			</header>
+			<Hero pageTitle="about" />
 
 			<style>
 				#myname {
 					font-family: 'Brush Script MT', cursive;
 				}
 			</style>
-
-			<div class="flex justify-center">
-				<div
-					class="laptop:grid-cols-1 tablet:grid-cols-1 phone:grid-cols-1 desktop:mt-26 mt-10 grid"
-				>
-					<div
-						class="laptop:col-span-1 tablet:col-span-1 phone:grid-cols-1 flex items-center justify-center"
-					>
-						<div class="mx-auto">
-							<h4
-								class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-3xl mb-6 text-left text-xl font-bold text-gray-50"
-							>
-								About Us
-							</h4>
-							<p
-								class="phone:text-xl tablet:text-xl laptop:text-xl desktop:text-xl mx-auto font-mono text-sm text-wrap text-gray-50"
-							>
-								P&amp;E Consulting LLC is a sustainability-focused firm dedicated to guiding clients
-								toward environmentally responsible practices that also deliver measurable business
-								value. Founded by professionals with international experience across engineering,
-								business, and sustainability, we blend technical knowledge with practical solutions.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</section>
 	<section class="mb-10">

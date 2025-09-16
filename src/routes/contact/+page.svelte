@@ -5,6 +5,8 @@
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import about from '$lib/jsondata/about.json';
+	import { goto } from '$app/navigation';
+	import Hero from '$lib/components/Hero.svelte';
 
 	let showMobileMenu: boolean = false;
 
@@ -20,7 +22,7 @@
 <div>
 	<section
 		in:fly={{ y: 150, duration: 1700 }}
-		class="phone:h-[20vh] tablet:h-[30vh] laptop:h-[40vh] desktop:h-[40vh] relative mb-12 h-[30vh] items-center justify-center space-y-12 bg-cover bg-center bg-no-repeat"
+		class="phone:h-[50vh] tablet:h-[60vh] laptop:h-[70vh] desktop:h-[70vh] relative h-[60vh] items-center justify-center space-y-12 bg-cover bg-center bg-no-repeat"
 		style="background-image: url('/images/header-hero-img-0.jpg');"
 	>
 		<!-- <Header {tabs} /> -->
@@ -49,10 +51,10 @@
 								/>
 							</svg>
 						</button>
-						<a
-							href="/"
-							class="laptop:gap-x-11 phone:text-2xl flex min-w-full text-xl leading-6 font-semibold text-gray-50"
-							>P&E Consulting</a
+						<button
+							on:click={() => goto('/')}
+							class="laptop:gap-x-11 phone:text-2xl flex min-w-full text-xl leading-6 font-bold text-gray-50"
+							>P&E Consulting LLC</button
 						>
 					</div>
 					<nav
@@ -114,43 +116,69 @@
 					</div>
 				{/if}
 			</header>
+			<Hero pageTitle="contact" />
 
 			<style>
 				#myname {
 					font-family: 'Brush Script MT', cursive;
 				}
 			</style>
-
-			<div class="">
-				<div
-					class="laptop:grid-cols-1 tablet:grid-cols-1 phone:grid-cols-1 desktop:mt-26 mt-10 grid"
-				>
-					<div
-						class="laptop:col-span-1 tablet:col-span-1 phone:grid-cols-1 flex items-center justify-start"
-					>
-						<h1
-							class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-5xl mb-6 text-left text-xl font-bold text-gray-50"
-						>
-							Contact Us
-						</h1>
-					</div>
-				</div>
-			</div>
 		</div>
 	</section>
-	<section>
-		<div class="mx-auto grid max-w-[1120px] min-w-[400px] grid-cols-3 gap-y-10 px-4">
-			<!-- <form class="col-span-3" method="POST" action="?/login">
-				<label>
-					Email
-					<input name="email" type="email" />
-				</label>
-				<label>
-					Message
-					<input name="password" type="text" />
-				</label>
-				<button>Send</button>
-			</form> -->
+	<section
+		class="tablet:min-h-[50vh] laptop:min-h-[60vh] desktop:min-h-[70vh] relative flex min-h-[40vh] items-center justify-center bg-gray-100 bg-cover bg-center bg-no-repeat pt-8 pb-10"
+	>
+		<div class="mx-auto w-full max-w-[1120px] px-4">
+			<h2
+				class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-4xl mb-6 text-center text-2xl font-bold text-gray-700"
+			>
+				Contact Us
+			</h2>
+
+			<form
+				class="mx-auto w-full max-w-lg rounded-lg bg-white p-4 shadow-md sm:p-6"
+				method="POST"
+				action="/api/contact"
+			>
+				<div class="mb-4">
+					<label for="name" class="mb-1 block text-sm font-medium text-gray-700">Name</label>
+					<input
+						id="name"
+						name="name"
+						type="text"
+						required
+						class="w-full rounded border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+						autocomplete="name"
+					/>
+				</div>
+				<div class="mb-4">
+					<label for="email" class="mb-1 block text-sm font-medium text-gray-700">Email</label>
+					<input
+						id="email"
+						name="email"
+						type="email"
+						required
+						class="w-full rounded border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+						autocomplete="email"
+					/>
+				</div>
+				<div class="mb-4">
+					<label for="message" class="mb-1 block text-sm font-medium text-gray-700">Message</label>
+					<textarea
+						id="message"
+						name="message"
+						required
+						rows="5"
+						class="w-full rounded border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+					></textarea>
+				</div>
+				<button
+					type="submit"
+					class="w-full rounded bg-blue-600 px-4 py-2 text-white transition hover:bg-blue-700"
+				>
+					Send Message
+				</button>
+			</form>
 		</div>
 	</section>
 </div>
