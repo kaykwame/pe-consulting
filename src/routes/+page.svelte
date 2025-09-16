@@ -68,7 +68,58 @@
 					{/each}
 				</nav>
 			</div>
+			{#if showMobileMenu}
+				<!-- Mobile menu, show/hide based on menu open state. -->
+				<div class="tablet:hidden" role="dialog" aria-modal="true">
+					<!-- Background backdrop, show/hide based on slide-over state. -->
+					<div class="fixed inset-0 z-50"></div>
+					<div
+						class="tablet:max-w-sm tablet:px-6 tablet:ring-1 tablet:ring-gray-900/10 fixed inset-y-0 left-0 z-50 w-full overflow-y-auto bg-white px-4 pb-6"
+					>
+						<div class="-ml-0.5 flex h-16 items-center gap-x-6">
+							<!-- svelte-ignore a11y_click_events_have_key_events -->
+							<!-- svelte-ignore a11y_no_static_element_interactions -->
+							<div
+								on:click={() => {
+									showMobileMenu = false;
+								}}
+								class="-m-2.5 p-2.5 text-gray-700"
+							>
+								<span class="sr-only">Close menu</span>
+								<button
+									on:click={() => {
+										showProj.set(false);
+									}}
+								>
+									<CloseSVG />
+								</button>
+							</div>
+						</div>
+						<div class="mt-2 space-y-2">
+							{#each Object.entries(tabsObj) as [key, tab]}
+								<a
+									href="/{tab == 'Home' ? '' : key.toLocaleLowerCase()}"
+									on:click={() => {
+										showMobileMenu = false;
+									}}
+									class="-mx-3 block rounded-lg px-3 py-2 font-mono text-base leading-7 font-semibold text-gray-900 hover:bg-gray-50"
+									>{tab}</a
+								>
+							{/each}
+							<!-- <a
+									href="/"
+									on:click={() => {
+										showMobileMenu = false;
+									}}
+									class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 font-semibold text-gray-900 hover:bg-gray-50"
+									>Home</a
+								> -->
+						</div>
+					</div>
+				</div>
+			{/if}
 		</header>
+
 		<Hero />
 	</div>
 </section>
@@ -181,45 +232,3 @@
 		</div>
 	</div>
 </section>
-{#if showMobileMenu}
-	<!-- Mobile menu, show/hide based on menu open state. -->
-	<div class="tablet:hidden" role="dialog" aria-modal="true">
-		<!-- Background backdrop, show/hide based on slide-over state. -->
-		<div class="z-50"></div>
-		<div
-			class="tablet:max-w-sm tablet:px-6 tablet:ring-1 tablet:ring-gray-900 left-0 z-50 w-full overflow-y-auto bg-white px-4 pb-6"
-		>
-			<div class="-ml-0.5 flex h-16 items-center gap-x-6">
-				<!-- svelte-ignore a11y_click_events_have_key_events -->
-				<!-- svelte-ignore a11y_no_static_element_interactions -->
-				<div
-					on:click={() => {
-						showMobileMenu = false;
-					}}
-					class="-m-2.5 p-2.5 text-gray-700"
-				>
-					<span class="sr-only">Close menu</span>
-					<button
-						on:click={() => {
-							showProj.set(false);
-						}}
-					>
-						<CloseSVG />
-					</button>
-				</div>
-			</div>
-			<div class="mt-2 space-y-2">
-				{#each Object.entries(tabsObj) as [key, tab]}
-					<a
-						href="/{tab == 'Home' ? '' : key.toLocaleLowerCase()}"
-						on:click={() => {
-							showMobileMenu = false;
-						}}
-						class="-mx-3 block rounded-lg px-3 py-2 font-mono text-base leading-7 font-semibold text-gray-900 hover:bg-gray-50"
-						>{tab}</a
-					>
-				{/each}
-			</div>
-		</div>
-	</div>
-{/if}
