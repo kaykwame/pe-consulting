@@ -201,7 +201,7 @@
 					<div class="">
 						<div class="mb-2 flex w-full justify-center">
 							<div
-								class="phone:h-36 phone:w-full tablet:h-44 tablet:w-4/5 laptop:h-48 laptop:w-4/5 desktop:h-52
+								class="phone:h-44 phone:w-full tablet:h-44 tablet:w-4/5 laptop:h-48 laptop:w-4/5 desktop:h-52
 									desktop:w-4/5 flex items-center justify-center rounded-sm bg-gray-300 text-center dark:bg-gray-700"
 							>
 								{#if value.image != ''}
