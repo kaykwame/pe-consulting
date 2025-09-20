@@ -1,6 +1,7 @@
 export const tabsObj = {
 	home: 'Home',
 	services: 'Our Services',
+	studies: 'Case Studies',
 	about: 'About Us',
 	contact: 'Contact'
 };
@@ -15,6 +16,11 @@ export const heroText: Record<string, { title: string; description: string }> = 
 		title: 'Our Services',
 		description:
 			'We provide a comprehensive range of sustainability consulting services designed to help clients comply with regulations, reduce environmental impact, and capture new opportunities'
+	},
+	studies: {
+		title: 'Case Studies',
+		description:
+			'Explore our portfolio of successful projects that demonstrate our expertise in sustainability consulting and the tangible benefits we deliver to our clients.'
 	},
 	about: {
 		title: 'Who We Are:',
@@ -99,4 +105,37 @@ export const services = {
 	// 	description_text:
 	// 		"Measure and understand your business's carbon footprint to set achievable reduction targets."
 	// }
+};
+
+export const caseStudies = {
+	'Water Contamination Mapping Using GIS (Obuasi, Ghana)': {
+		image: null,
+		description_text: [
+			'Conducted a spatial analysis of heavy water contamination in affected regions, using GIS and photogrammetry to identify pollution pathways and assess risks to communities. The study demonstrated the role of geospatial data in water management and public health monitoring.'
+		]
+	},
+	'Life Cycle Assessment of Building Materials': {
+		image: null,
+		description_text: [
+			'Completed a full cradle-to-grave LCA comparing concrete, brick, and structurally insulated panels (SIPs) for single-family housing. The research highlighted the environmental trade-offs of each material, identifying pathways to more sustainable housing construction.'
+		]
+	},
+	'Bowers Rentals Project (Ongoing, P&E Consulting)': {
+		image: null,
+		description_text: [
+			'Currently leading data collection for a sustainability report covering 150+ rental units (single-family and apartments). The study evaluates energy and water consumption trends, compliance, and opportunities for future sustainability integration.'
+		]
+	},
+	'Corporate Sustainability Experience (Neumann Project)': {
+		image: null,
+		description_text: [
+			'Worked on a corporate initiative integrating sustainability practices into a manufacturing firm’s operations. Focus areas included resource efficiency, waste reduction strategies, and staff engagement in green practices.'
+		]
+	},
+	'Circular Economy Pilot Project': {
+		image: null,
+		description_text: [
+			'Designed and implemented a pilot initiative exploring material reuse and recycling opportunities. The project aimed at reducing resource inputs while improving environmental performance.'
+		]
+	}
 };

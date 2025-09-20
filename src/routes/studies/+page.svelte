@@ -4,7 +4,7 @@
 	import Hero from '$lib/components/Hero.svelte';
 	import CloseSVG from '$lib/components/SVGs/CloseSVG.svelte';
 	import EmptyImageSvg from '$lib/components/SVGs/EmptyImageSVG.svelte';
-	import { services, tabsObj } from '$lib/general/helpers';
+	import { caseStudies, services, tabsObj } from '$lib/general/helpers';
 	import { showProj } from '$lib/stores/showProjStore';
 	import { onMount } from 'svelte';
 	import { fade, fly } from 'svelte/transition';
@@ -24,7 +24,7 @@
 <section
 	in:fly={{ y: 150, duration: 1700 }}
 	class="phone:h-[50vh] tablet:h-[60vh] laptop:h-[70vh] desktop:h-[70vh] relative h-[60vh] items-center justify-center space-y-12 bg-cover bg-center bg-no-repeat"
-	style="background-image: url('/images/header-hero-img-1.jpg');"
+	style="background-image: url('/images/header-hero-img-5.jpg');"
 >
 	<!-- <Header {tabs} /> -->
 	<div class="mx-auto max-w-[1120px] min-w-[400px] px-3">
@@ -120,69 +120,10 @@
 			{/if}
 		</header>
 
-		<Hero />
+		<Hero pageTitle="studies" />
 	</div>
 </section>
-<section
-	class="tablet:min-h-[50vh] laptop:min-h-[60vh] desktop:min-h-[70vh] relative flex min-h-[40vh] items-center justify-center bg-gray-100 bg-cover bg-center bg-no-repeat pt-8"
->
-	<!-- <Header {tabs} /> -->
-	<div class="mx-auto max-w-[1120px] min-w-[400px] px-3">
-		<header class="inset-x-0 top-0 z-50 flex h-16 border-b border-gray-100">
-			<div class="mx-auto flex w-full max-w-7xl items-center justify-between">
-				<div class="mx-auto flex items-center justify-center gap-x-5">
-					<WhiteButton on:click={() => goto('/about')} rounded={false} buttonSize="xl"
-						>Learn More</WhiteButton
-					>
-					<WhiteButton on:click={() => goto('/services')} rounded={false} buttonSize="xl"
-						>Our Services</WhiteButton
-					>
-					<WhiteButton on:click={() => goto('/studies')} rounded={false} buttonSize="xl">
-						Case Studies</WhiteButton
-					>
-				</div>
-			</div>
-		</header>
-		<div class="">
-			<div
-				class="phone:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 desktop:grid-cols-4 laptop:mt-10 tablet:mt-7 phone:mt-4 grid"
-			>
-				<div class="col-span-4">
-					<h1
-						class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-4xl mb-8 text-left text-xl font-bold text-gray-700"
-					>
-						Our Story
-					</h1>
-				</div>
-				<div
-					class="phone:col-span-1 tablet:col-span-2 laptop:col-span-3 desktop:col-span-3 mr-8 flex items-center justify-center"
-				>
-					<div>
-						<p class="desktop:text-base font-mono text-sm text-wrap text-gray-700">
-							Founded in 2025 by Prince Pappoe, P&E Consulting was created to address a critical
-							gap: Our team is made of brilliant individuals with years of experience in
-							engineering, environmental and business world and noticed that while large
-							corporations have internal sustainability teams, SMEs often lack access to specialized
-							expertise. We aim to change that by providing realistic, impactful solutions tailored
-							to your business needs.
-						</p>
-					</div>
-				</div>
-				<div
-					class="tablet:col-span-1 laptop:col-span-1 desktop:col-span-1 tablet:flex hidden items-center justify-center"
-				>
-					<div class="flex h-full w-full items-center justify-center">
-						<img
-							src="/images/header-hero-img-1 old.jpg"
-							alt="about us image"
-							class="my-6 h-34 w-full object-cover"
-						/>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+
 <section
 	class="relative items-center justify-center space-y-12 bg-gray-50 bg-cover bg-center bg-no-repeat pt-8 pb-28"
 >
@@ -191,13 +132,13 @@
 			<h1
 				class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-4xl mb-6 text-left text-xl font-bold text-gray-800"
 			>
-				Quick Highlights
+				Case Studies
 			</h1>
 			<div
 				class=" phone:grid-cols-1 tablet:grid-cols-2
 					laptop:grid-cols-3 desktop:grid-cols-3 grid gap-y-8"
 			>
-				{#each Object.entries(services) as [service, value]}
+				{#each Object.entries(caseStudies) as [study, value]}
 					<div class="">
 						<div class="mb-2 flex w-full justify-center">
 							<div
@@ -207,7 +148,7 @@
 								{#if value.image != ''}
 									<img
 										src={`/images/services/${value.image}`}
-										alt={service}
+										alt={study}
 										class="h-full w-full object-cover"
 									/>
 								{:else}
@@ -217,7 +158,7 @@
 						</div>
 						<div class="tablet:w-4/5 laptop:w-4/5 desktop:w-4/5 mx-auto mb-2 w-full">
 							<div class="mb-1 text-center font-bold text-gray-900">
-								{service}
+								{study}
 							</div>
 							<!-- <ul class="list-inside list-disc text-sm text-gray-800"> -->
 							{#each value.description_text as text}
