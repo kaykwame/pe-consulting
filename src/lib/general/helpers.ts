@@ -139,3 +139,22 @@ export const caseStudies = {
 		]
 	}
 };
+
+export const people = [
+	{
+		name: 'Prince Pappoe',
+		title: 'Founder & Principal Consultant',
+		image: 'Pappoe.jpg',
+		bio: [
+			'Prince is the founder and principal consultant at P&E Consulting LLC. With a background in environmental engineering and international experience, he brings a unique blend of technical expertise and practical business acumen to the firm.'
+		]
+	},
+	{
+		name: 'Ohene',
+		title: 'Sustainability Analyst',
+		image: 'Ohene.jpg',
+		bio: [
+			'Ohene is a sustainability analyst at P&E Consulting LLC. He specializes in environmental policy and has a strong background in data analysis and project management.'
+		]
+	}
+];

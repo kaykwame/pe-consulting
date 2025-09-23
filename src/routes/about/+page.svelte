@@ -1,6 +1,6 @@
 <script lang="ts">
 	import CloseSVG from '$lib/components/SVGs/CloseSVG.svelte';
-	import { tabsObj } from '$lib/general/helpers';
+	import { people, tabsObj } from '$lib/general/helpers';
 	import { showProj } from '$lib/stores/showProjStore';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
@@ -126,21 +126,54 @@
 		</div>
 	</section>
 	<section class="mb-10">
-		<div class="mx-auto grid max-w-[1120px] min-w-[400px] grid-cols-3 gap-y-10 px-4">
-			{#each Object.entries(about) as [title, description]}
-				<div class="col-span-3">
-					<p
-						class="phone:text-2xl tablet:text-2xl laptop:text-2xl desktop:text-3xl mb-3 text-center text-2xl font-bold text-gray-700"
-					>
-						{title}
-					</p>
-					<div class="flex justify-center text-center">
-						<p class=" max-w-[500px] text-center">
-							{description}
+		<div
+			class="laptop:grid-cols-2 mx-auto grid max-w-[1120px] min-w-[400px] grid-cols-1 gap-x-10 gap-y-10 px-4"
+		>
+			<!-- About entries column -->
+			<div>
+				{#each Object.entries(about) as [title, description]}
+					<div class="mb-8">
+						<p
+							class="phone:text-2xl tablet:text-2xl laptop:text-2xl desktop:text-3xl mb-3 text-center text-2xl font-bold text-gray-700"
+						>
+							{title}
 						</p>
+						<div class="flex justify-center text-center">
+							{#each description as item}
+								<p class="max-w-[500px] text-center">
+									{item}
+								</p>
+							{/each}
+						</div>
 					</div>
+				{/each}
+			</div>
+			<!-- Images and text column -->
+			<div>
+				<div class="flex flex-col items-center gap-y-8">
+					{#each people as person}
+						<!-- Example image and text blocks, replace with your own images/text -->
+						<div class="relative w-full">
+							<img
+								src={`/images/about/${person.image}`}
+								alt={person.name}
+								class="float-left mt-0 mr-4 mb-4 h-44 w-44 rounded-md object-cover shadow"
+								style="margin-right: 1rem;"
+							/>
+
+							<p
+								class="phone:pt-0 phone:pb-5 tablet:pt-5 tablet:pb-5 laptop:pt-7 laptop:pb-7 desktop:pt-10 desktop:pb-10 mt-0 mb-0 text-center text-5xl font-bold text-gray-800"
+							>
+								{person.name}
+							</p>
+
+							<p class="text-gray-600">
+								{person.bio}
+							</p>
+						</div>
+					{/each}
 				</div>
-			{/each}
+			</div>
 		</div>
 	</section>
 </div>
