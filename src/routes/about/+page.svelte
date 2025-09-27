@@ -1,10 +1,9 @@
 <script lang="ts">
 	import CloseSVG from '$lib/components/SVGs/CloseSVG.svelte';
-	import { people, tabsObj } from '$lib/general/helpers';
+	import { about, people, tabsObj } from '$lib/general/helpers';
 	import { showProj } from '$lib/stores/showProjStore';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
-	import about from '$lib/jsondata/about.json';
 	import { goto } from '$app/navigation';
 	import Hero from '$lib/components/Hero.svelte';
 
@@ -125,12 +124,13 @@
 			</style>
 		</div>
 	</section>
+
 	<section class="mb-10">
 		<div
 			class="laptop:grid-cols-2 mx-auto grid max-w-[1120px] min-w-[400px] grid-cols-1 gap-x-10 gap-y-10 px-4"
 		>
 			<!-- About entries column -->
-			<div>
+			<div class="text-gray-600">
 				{#each Object.entries(about) as [title, description]}
 					<div class="mb-8">
 						<p
@@ -138,9 +138,9 @@
 						>
 							{title}
 						</p>
-						<div class="flex justify-center text-center">
+						<div class="">
 							{#each description as item}
-								<p class="max-w-[500px] text-center">
+								<p class="flex max-w-[500px] justify-center text-center">
 									{item}
 								</p>
 							{/each}

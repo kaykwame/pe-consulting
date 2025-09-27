@@ -158,3 +158,21 @@ export const people = [
 		]
 	}
 ];
+
+export const about = {
+	'Who We Are': [
+		'P&E Consulting LLC is a sustainability-focused firm dedicated to guiding clients toward environmentally responsible practices that also deliver measurable business value. Founded by professionals with international experience across engineering, business, and sustainability, we blend technical knowledge with practical solutions.'
+	],
+	'Our Mission': [
+		'Our mission is to support organizations in embedding sustainability into their core operations, ensuring compliance, efficiency, and long-term resilience.'
+	],
+	'Our Vision': [
+		'We envision a sustainable future achieved through innovative, practical, and nature-inspired solutions that are thoughtfully customized to each client’s needs.'
+	],
+	'Our Values': [
+		'Integrity & Transparency',
+		'Scientific Rigor & Practical Application',
+		' Collaboration & Inclusivity',
+		'Long-Term Impact'
+	]
+};
