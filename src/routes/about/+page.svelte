@@ -157,7 +157,7 @@
 							<img
 								src={`/images/about/${person.image}`}
 								alt={person.name}
-								class="float-left mt-0 mr-4 mb-4 h-44 w-44 rounded-md object-cover shadow"
+								class="float-left mt-0 mr-4 mb-4 h-44 w-44 rounded-full object-cover shadow"
 								style="margin-right: 1rem;"
 							/>
 
