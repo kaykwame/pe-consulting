@@ -124,7 +124,7 @@
 	</div>
 </section>
 <section
-	class="tablet:min-h-[50vh] laptop:min-h-[60vh] desktop:min-h-[70vh] relative flex min-h-[40vh] items-center justify-center bg-gray-100 bg-cover bg-center bg-no-repeat pt-8"
+	class="tablet:min-h-[50vh] laptop:min-h-[60vh] desktop:min-h-[70vh] relative flex min-h-[40vh] items-center justify-center bg-gray-100 bg-cover bg-center bg-no-repeat py-8"
 >
 	<!-- <Header {tabs} /> -->
 	<div class="mx-auto max-w-[1120px] min-w-[400px] px-3">
@@ -184,18 +184,18 @@
 	</div>
 </section>
 <section
-	class="relative items-center justify-center space-y-12 bg-gray-50 bg-cover bg-center bg-no-repeat pt-8 pb-28"
+	class="relative items-center justify-center space-y-12 bg-gray-50 bg-cover bg-center bg-no-repeat pb-8"
 >
-	<div class="mx-auto max-w-[1120px] min-w-[300px] px-3">
+	<div class="mx-auto max-w-[1120px] min-w-[300px] bg-slate-50 px-3">
 		<div>
 			<h1
-				class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-4xl mb-6 text-left text-xl font-bold text-gray-800"
+				class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-4xl py-8 text-left text-xl font-bold text-gray-800"
 			>
 				Quick Highlights
 			</h1>
 			<div
 				class=" phone:grid-cols-1 tablet:grid-cols-2
-					laptop:grid-cols-3 desktop:grid-cols-3 grid gap-y-8"
+					laptop:grid-cols-3 desktop:grid-cols-3 grid gap-y-8 py-4"
 			>
 				{#each Object.entries(services) as [service, value]}
 					<div class="">
