@@ -7,7 +7,7 @@
 	import { services, tabsObj } from '$lib/general/helpers';
 	import { showProj } from '$lib/stores/showProjStore';
 	import { onMount } from 'svelte';
-	import { fade, fly } from 'svelte/transition';
+	import { crossfade, draw, fade, fly } from 'svelte/transition';
 
 	let showMobileMenu: boolean = false;
 
@@ -130,7 +130,7 @@
 	<div class="mx-auto max-w-[1120px] min-w-[400px] px-3">
 		<header class="inset-x-0 top-0 z-50 flex h-16 border-b border-gray-100">
 			<div class="mx-auto flex w-full max-w-7xl items-center justify-between">
-				<div class="mx-auto flex items-center justify-center gap-x-5">
+				<div class="mx-auto flex items-center justify-center gap-x-5" in:fade={{ duration: 2000 }}>
 					<WhiteButton on:click={() => goto('/about')} rounded={false} buttonSize="xl"
 						>Learn More</WhiteButton
 					>
