@@ -150,7 +150,7 @@ export const people = [
 		]
 	},
 	{
-		name: 'Ohene',
+		name: 'Emmanuel Adu-Ohene',
 		title: 'Sustainability Analyst',
 		image: 'Ohene.jpg',
 		bio: [
