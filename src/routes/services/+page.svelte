@@ -6,6 +6,7 @@
 	import { showProj } from '$lib/stores/showProjStore';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
+	import EmptyImageSvg from '$lib/components/SVGs/EmptyImageSVG.svelte';
 
 	let showMobileMenu: boolean = false;
 
@@ -116,20 +117,48 @@
 			</style>
 		</div>
 	</section>
-	<section>
-		<div class="mx-auto grid max-w-[1120px] min-w-[400px] grid-cols-3 gap-y-10 px-4">
-			{#each Object.entries(services) as [service, value]}
-				<div class="col-span-3">
-					<p
-						class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-4xl mb-3 text-left text-2xl font-bold text-gray-700"
-					>
-						{service}
-					</p>
-					<p>
-						{value.description_text}
-					</p>
+	<section
+		class="relative items-center justify-center space-y-12 bg-cover bg-center bg-no-repeat pb-8"
+	>
+		<div class="mx-auto max-w-[1120px] min-w-[300px] px-3">
+			<div>
+				<div
+					class=" phone:grid-cols-1 tablet:grid-cols-2
+					laptop:grid-cols-3 desktop:grid-cols-3 grid gap-y-8 py-4"
+				>
+					{#each Object.entries(services) as [service, value]}
+						<div class="">
+							<div class="mb-2 flex w-full justify-center">
+								<div
+									class="phone:h-44 phone:w-full tablet:h-44 tablet:w-4/5 laptop:h-48 laptop:w-4/5 desktop:h-52
+									desktop:w-4/5 flex items-center justify-center rounded-sm bg-gray-300 text-center dark:bg-gray-700"
+								>
+									{#if value.image != ''}
+										<img
+											src={`/images/services/${value.image}`}
+											alt={service}
+											class="h-full w-full object-cover"
+										/>
+									{:else}
+										<EmptyImageSvg />
+									{/if}
+								</div>
+							</div>
+							<div class="tablet:w-4/5 laptop:w-4/5 desktop:w-4/5 mx-auto mb-2 w-full">
+								<div class="mb-1 text-center font-bold text-gray-900">
+									{service}
+								</div>
+								<!-- <ul class="list-inside list-disc text-sm text-gray-800"> -->
+								{#each value.description_text as text}
+									<!-- <li class="py-1">{text}</li> -->
+									<p class="py-1 text-sm text-gray-800">{text}</p>
+								{/each}
+								<!-- </ul> -->
+							</div>
+						</div>
+					{/each}
 				</div>
-			{/each}
+			</div>
 		</div>
 	</section>
 </div>

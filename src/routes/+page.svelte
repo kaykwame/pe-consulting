@@ -10,9 +10,23 @@
 	import { crossfade, draw, fade, fly } from 'svelte/transition';
 
 	let showMobileMenu: boolean = false;
-
+	let isVisible = false;
 	onMount(() => {
 		showProj.set(false);
+		const target = document.querySelector('.animate-on-scroll');
+		const observer = new IntersectionObserver(
+			(entries) => {
+				if (entries[0].isIntersecting) {
+					isVisible = true;
+					observer.disconnect(); // Stop observing once visible
+				}
+			},
+			{ threshold: 0.1 } // Trigger when 10% of the element is visible
+		);
+
+		if (target) observer.observe(target);
+
+		return () => observer.disconnect();
 	});
 </script>
 
@@ -147,7 +161,10 @@
 			<div
 				class="phone:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 desktop:grid-cols-4 laptop:mt-10 tablet:mt-7 phone:mt-4 grid"
 			>
-				<div class="col-span-4">
+				<div
+					class="animate-on-scroll col-span-4"
+					in:fly={{ x: -100, duration: 800, delay: isVisible ? 0 : 200 }}
+				>
 					<h1
 						class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-4xl mb-8 text-left text-xl font-bold text-gray-700"
 					>
@@ -155,7 +172,8 @@
 					</h1>
 				</div>
 				<div
-					class="phone:col-span-1 tablet:col-span-2 laptop:col-span-3 desktop:col-span-3 mr-8 flex items-center justify-center"
+					in:fly={{ x: 100, duration: 800, delay: isVisible ? 0 : 200 }}
+					class="animate-scroll phone:col-span-1 tablet:col-span-2 laptop:col-span-3 desktop:col-span-3 mr-8 flex items-center justify-center"
 				>
 					<div>
 						<p class="desktop:text-base font-mono text-sm text-wrap text-gray-700">
