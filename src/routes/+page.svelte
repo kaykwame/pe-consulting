@@ -262,6 +262,10 @@
 			</div>
 		</div>
 	</div>
+</section>
+<section
+	class="relative items-center justify-center space-y-12 bg-gray-50 bg-cover bg-center bg-no-repeat"
+>
 	<div class="bg-[#fff9e6]">
 		<div class="flex justify-center">
 			<div class="flex w-full max-w-xl flex-col items-center rounded-md px-8 py-10 shadow-none">
