@@ -4,6 +4,7 @@
 	import Hero from '$lib/components/Hero.svelte';
 	import CloseSVG from '$lib/components/SVGs/CloseSVG.svelte';
 	import EmptyImageSvg from '$lib/components/SVGs/EmptyImageSVG.svelte';
+	import PhoneSVG from '$lib/components/SVGs/PhoneSVG.svelte';
 	import { services, tabsObj } from '$lib/general/helpers';
 	import { showProj } from '$lib/stores/showProjStore';
 	import { onMount } from 'svelte';
@@ -145,13 +146,24 @@
 		<header class="inset-x-0 top-0 z-50 flex h-16 border-b border-gray-100">
 			<div class="mx-auto flex w-full max-w-7xl items-center justify-between">
 				<div class="mx-auto flex items-center justify-center gap-x-5" in:fade={{ duration: 2000 }}>
-					<WhiteButton on:click={() => goto('/about')} rounded={false} buttonSize="xl"
-						>Learn More</WhiteButton
+					<WhiteButton
+						extraCss="rounded rounded-md"
+						on:click={() => goto('/about')}
+						rounded={false}
+						buttonSize="xl">Learn More</WhiteButton
 					>
-					<WhiteButton on:click={() => goto('/services')} rounded={false} buttonSize="xl"
-						>Our Services</WhiteButton
+					<WhiteButton
+						extraCss="rounded rounded-md"
+						on:click={() => goto('/services')}
+						rounded={false}
+						buttonSize="xl">Our Services</WhiteButton
 					>
-					<WhiteButton on:click={() => goto('/studies')} rounded={false} buttonSize="xl">
+					<WhiteButton
+						extraCss="rounded rounded-md"
+						on:click={() => goto('/studies')}
+						rounded={false}
+						buttonSize="xl"
+					>
 						Case Studies</WhiteButton
 					>
 				</div>
@@ -176,7 +188,7 @@
 					class="animate-scroll phone:col-span-1 tablet:col-span-2 laptop:col-span-3 desktop:col-span-3 mr-8 flex items-center justify-center"
 				>
 					<div>
-						<p class="desktop:text-base font-mono text-sm text-wrap text-gray-700">
+						<p class="desktop:text-base text-justify font-mono text-sm text-wrap text-gray-700">
 							Founded in 2025 by Prince Pappoe, P&E Consulting was created to address a critical
 							gap: Our team is made of brilliant individuals with years of experience in
 							engineering, environmental and business world and noticed that while large
@@ -190,6 +202,7 @@
 					class="tablet:col-span-1 laptop:col-span-1 desktop:col-span-1 tablet:flex hidden items-center justify-center"
 				>
 					<div class="flex h-full w-full items-center justify-center">
+						<!-- svelte-ignore a11y_img_redundant_alt -->
 						<img
 							src="/images/header-hero-img-1 old.jpg"
 							alt="about us image"
@@ -220,13 +233,13 @@
 						<div class="mb-2 flex w-full justify-center">
 							<div
 								class="phone:h-44 phone:w-full tablet:h-44 tablet:w-4/5 laptop:h-48 laptop:w-4/5 desktop:h-52
-									desktop:w-4/5 flex items-center justify-center rounded-sm bg-gray-300 text-center dark:bg-gray-700"
+									desktop:w-4/5 flex items-center justify-center rounded-md bg-gray-300 text-center dark:bg-gray-700"
 							>
 								{#if value.image != ''}
 									<img
 										src={`/images/services/${value.image}`}
 										alt={service}
-										class="h-full w-full object-cover"
+										class="h-full w-full rounded-md object-cover"
 									/>
 								{:else}
 									<EmptyImageSvg />
@@ -240,12 +253,31 @@
 							<!-- <ul class="list-inside list-disc text-sm text-gray-800"> -->
 							{#each value.description_text as text}
 								<!-- <li class="py-1">{text}</li> -->
-								<p class="py-1 text-sm text-gray-800">{text}</p>
+								<p class="py-1 text-justify text-sm text-gray-500">{text}</p>
 							{/each}
 							<!-- </ul> -->
 						</div>
 					</div>
 				{/each}
+			</div>
+		</div>
+	</div>
+	<div class="bg-[#fff9e6]">
+		<div class="flex justify-center">
+			<div class="flex w-full max-w-xl flex-col items-center rounded-md px-8 py-10 shadow-none">
+				<h4 class="mb-4 text-center text-2xl font-bold text-gray-800">Fancy Our Services?</h4>
+				<p class="mb-6 text-center text-gray-600">
+					Every business is unique. Let's discuss how we can create a tailored consulting package
+					that addresses your specific challenges and objectives.
+				</p>
+				<button
+					on:click={() => goto('/contact')}
+					class="flex items-center justify-center gap-2 rounded-md px-6 py-3 text-xl font-bold text-white"
+					style="background: linear-gradient(90deg, #fbbf24 0%, #f59e42 100%);"
+				>
+					Schedule a call
+					<PhoneSVG size={16} />
+				</button>
 			</div>
 		</div>
 	</div>

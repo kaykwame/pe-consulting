@@ -140,7 +140,7 @@
 						</p>
 						<div class="">
 							{#each description as item}
-								<p class="flex max-w-[500px] justify-center text-center">
+								<p class="flex max-w-[500px] justify-center text-justify">
 									{item}
 								</p>
 							{/each}
@@ -162,12 +162,12 @@
 							/>
 
 							<p
-								class="phone:pt-0 phone:pb-5 tablet:pt-5 tablet:pb-5 laptop:pt-7 laptop:pb-7 desktop:pt-10 desktop:pb-10 mt-0 mb-0 text-center text-5xl font-bold text-gray-800"
+								class="phone:pt-0 phone:pb-5 tablet:pt-5 tablet:pb-5 laptop:pt-7 laptop:pb-7 desktop:pt-10 desktop:pb-10 mt-0 mb-0 text-center text-4xl font-bold text-gray-800"
 							>
 								{person.name}
 							</p>
 
-							<p class="text-gray-600">
+							<p class="text-justify text-gray-600">
 								{person.bio}
 							</p>
 						</div>

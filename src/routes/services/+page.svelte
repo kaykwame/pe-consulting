@@ -131,13 +131,13 @@
 							<div class="mb-2 flex w-full justify-center">
 								<div
 									class="phone:h-44 phone:w-full tablet:h-44 tablet:w-4/5 laptop:h-48 laptop:w-4/5 desktop:h-52
-									desktop:w-4/5 flex items-center justify-center rounded-sm bg-gray-300 text-center dark:bg-gray-700"
+									desktop:w-4/5 flex items-center justify-center rounded-md bg-gray-300 text-center dark:bg-gray-700"
 								>
 									{#if value.image != ''}
 										<img
 											src={`/images/services/${value.image}`}
 											alt={service}
-											class="h-full w-full object-cover"
+											class="h-full w-full rounded-md object-cover"
 										/>
 									{:else}
 										<EmptyImageSvg />
@@ -151,7 +151,7 @@
 								<!-- <ul class="list-inside list-disc text-sm text-gray-800"> -->
 								{#each value.description_text as text}
 									<!-- <li class="py-1">{text}</li> -->
-									<p class="py-1 text-sm text-gray-800">{text}</p>
+									<p class="py-1 text-justify text-sm text-gray-500">{text}</p>
 								{/each}
 								<!-- </ul> -->
 							</div>
