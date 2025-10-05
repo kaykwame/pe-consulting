@@ -5,7 +5,7 @@
 	import { services, tabsObj } from '$lib/general/helpers';
 	import { showProj } from '$lib/stores/showProjStore';
 	import { onMount } from 'svelte';
-	import { fly } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
 	import EmptyImageSvg from '$lib/components/SVGs/EmptyImageSVG.svelte';
 
 	let showMobileMenu: boolean = false;
@@ -21,7 +21,7 @@
 </svelte:head>
 <div>
 	<section
-		in:fly={{ y: 150, duration: 1700 }}
+		in:fade={{ duration: 1000 }}
 		class="phone:h-[50vh] tablet:h-[60vh] laptop:h-[70vh] desktop:h-[70vh] relative mb-12 h-[60vh] items-center justify-center space-y-12 bg-cover bg-center bg-no-repeat"
 		style="background-image: url('/images/header-hero-img-3.jpg');"
 	>

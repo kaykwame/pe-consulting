@@ -37,7 +37,7 @@
 </svelte:head>
 
 <section
-	in:fly={{ y: 150, duration: 1700 }}
+	in:fade={{ duration: 1000 }}
 	class="phone:h-[50vh] tablet:h-[60vh] laptop:h-[70vh] desktop:h-[70vh] relative h-[60vh] items-center justify-center space-y-12 bg-cover bg-center bg-no-repeat"
 	style="background-image: url('/images/header-hero-img-1.jpg');"
 >
