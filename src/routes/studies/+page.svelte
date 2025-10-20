@@ -27,7 +27,7 @@
 	style="background-image: url('/images/header-hero-img-5.jpg');"
 >
 	<!-- <Header {tabs} /> -->
-	<div class="mx-auto max-w-[1120px] min-w-[400px] px-3">
+	<div class="mx-auto max-w-[1120px] min-w-[300px] px-3">
 		<header class="inset-x-0 top-0 z-50 flex h-16 border-b border-gray-50">
 			<div class="mx-auto flex w-full max-w-7xl items-center justify-between">
 				<div class="flex flex-1 items-center gap-x-3">

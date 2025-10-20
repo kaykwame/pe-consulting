@@ -25,7 +25,7 @@
 		style="background-image: url('/images/header-hero-img-4.jpg');"
 	>
 		<!-- <Header {tabs} /> -->
-		<div class="mx-auto max-w-[1120px] min-w-[400px] px-3">
+		<div class="mx-auto max-w-[1120px] min-w-[300px] px-3">
 			<header class="inset-x-0 top-0 z-50 flex h-16 border-b border-gray-50">
 				<div class="mx-auto flex w-full max-w-7xl items-center justify-between">
 					<div class="flex flex-1 items-center gap-x-3">
@@ -127,7 +127,7 @@
 
 	<section class="mb-10">
 		<div
-			class="laptop:grid-cols-2 mx-auto grid max-w-[1120px] min-w-[400px] grid-cols-1 gap-x-10 gap-y-10 px-4"
+			class="laptop:grid-cols-2 mx-auto grid max-w-[1120px] min-w-[300px] grid-cols-1 gap-x-10 gap-y-10 px-4"
 		>
 			<!-- About entries column -->
 			<div class="text-gray-600">
@@ -140,7 +140,7 @@
 						</p>
 						<div class="">
 							{#each description as item}
-								<p class="flex max-w-[500px] justify-center text-justify">
+								<p class="flex justify-center text-justify">
 									{item}
 								</p>
 							{/each}
@@ -157,7 +157,11 @@
 							<img
 								src={`/images/about/${person.image}`}
 								alt={person.name}
-								class="float-left mt-0 mr-4 mb-4 h-44 w-44 rounded-full object-cover shadow"
+								class="phone:h-24 phone:w-24 tablet:h-32 tablet:w-32 laptop:h-44 laptop:w-44 desktop:h-56
+									desktop:w-56 float-left
+									mt-0
+									mb-4 rounded-full
+									object-cover shadow"
 								style="margin-right: 1rem;"
 							/>
 

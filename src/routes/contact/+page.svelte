@@ -13,6 +13,37 @@
 	onMount(() => {
 		showProj.set(false);
 	});
+
+	// New: client submit handler (no UI layout changes)
+	let submitting = false;
+
+	async function handleSubmit(e: Event) {
+		e.preventDefault();
+		if (submitting) return;
+		submitting = true;
+
+		const form = e.currentTarget as HTMLFormElement;
+		const fd = new FormData(form);
+
+		try {
+			const res = await fetch('/api/send-mail', {
+				method: 'POST',
+				body: fd
+			});
+
+			if (res.ok) {
+				alert('Message sent successfully.');
+				form.reset();
+			} else {
+				const json = await res.json().catch(() => null);
+				alert('Send failed: ' + (json?.error ?? res.statusText));
+			}
+		} catch (err: any) {
+			alert('Send failed: ' + (err?.message ?? 'unknown error'));
+		} finally {
+			submitting = false;
+		}
+	}
 </script>
 
 <svelte:head>
@@ -26,7 +57,7 @@
 		style="background-image: url('/images/header-hero-img-0.jpg');"
 	>
 		<!-- <Header {tabs} /> -->
-		<div class="mx-auto max-w-[1120px] min-w-[400px] px-3">
+		<div class="mx-auto max-w-[1120px] min-w-[300px] px-3">
 			<header class="inset-x-0 top-0 z-50 flex h-16 border-b border-gray-50">
 				<div class="mx-auto flex w-full max-w-7xl items-center justify-between">
 					<div class="flex flex-1 items-center gap-x-3">
@@ -139,6 +170,7 @@
 				class="mx-auto w-full max-w-lg rounded-lg bg-white p-4 shadow-md sm:p-6"
 				method="POST"
 				action="/api/contact"
+				on:submit|preventDefault={handleSubmit}
 			>
 				<div class="mb-4">
 					<label for="name" class="mb-1 block text-sm font-medium text-gray-700">Name</label>
@@ -175,6 +207,7 @@
 				<button
 					type="submit"
 					class="w-full rounded bg-blue-600 px-4 py-2 text-white transition hover:bg-blue-700"
+					disabled={submitting}
 				>
 					Send Message
 				</button>

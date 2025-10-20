@@ -42,7 +42,7 @@
 	style="background-image: url('/images/header-hero-img-1.jpg');"
 >
 	<!-- <Header {tabs} /> -->
-	<div class="mx-auto max-w-[1120px] min-w-[400px] px-3">
+	<div class="mx-auto max-w-[1120px] min-w-[300px] px-3">
 		<header class="inset-x-0 top-0 z-50 flex h-16 border-b border-gray-50">
 			<div class="mx-auto flex w-full max-w-7xl items-center justify-between">
 				<div class="flex flex-1 items-center gap-x-3">
@@ -142,7 +142,7 @@
 	class="tablet:min-h-[50vh] laptop:min-h-[60vh] desktop:min-h-[70vh] relative flex min-h-[40vh] items-center justify-center bg-gray-100 bg-cover bg-center bg-no-repeat py-8"
 >
 	<!-- <Header {tabs} /> -->
-	<div class="mx-auto max-w-[1120px] min-w-[400px] px-3">
+	<div class="mx-auto max-w-[1120px] min-w-[300px] px-3">
 		<header class="inset-x-0 top-0 z-50 flex h-16 border-b border-gray-100">
 			<div class="mx-auto flex w-full max-w-7xl items-center justify-between">
 				<div class="mx-auto flex items-center justify-center gap-x-5" in:fade={{ duration: 2000 }}>
@@ -169,7 +169,7 @@
 				</div>
 			</div>
 		</header>
-		<div class="">
+		<div class="mt-5">
 			<div
 				class="phone:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 desktop:grid-cols-4 laptop:mt-10 tablet:mt-7 phone:mt-4 grid"
 			>
@@ -185,7 +185,7 @@
 				</div>
 				<div
 					in:fly={{ x: 100, duration: 800, delay: isVisible ? 0 : 200 }}
-					class="animate-scroll phone:col-span-1 tablet:col-span-2 laptop:col-span-3 desktop:col-span-3 mr-8 flex items-center justify-center"
+					class="animate-scroll phone:col-span-1 tablet:col-span-2 laptop:col-span-3 desktop:col-span-3 flex items-center justify-center"
 				>
 					<div>
 						<p class="desktop:text-base text-justify font-mono text-sm text-wrap text-gray-700">
@@ -201,12 +201,12 @@
 				<div
 					class="tablet:col-span-1 laptop:col-span-1 desktop:col-span-1 tablet:flex hidden items-center justify-center"
 				>
-					<div class="flex h-full w-full items-center justify-center">
+					<div class="ml-8 flex h-full w-full items-center justify-center">
 						<!-- svelte-ignore a11y_img_redundant_alt -->
 						<img
 							src="/images/header-hero-img-1 old.jpg"
 							alt="about us image"
-							class="my-6 h-34 w-full object-cover"
+							class="my-6 h-34 w-full rounded-md object-cover"
 						/>
 					</div>
 				</div>

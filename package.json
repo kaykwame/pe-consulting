@@ -26,6 +26,8 @@
 		"@tailwindcss/forms": "^0.5.9",
 		"@tailwindcss/typography": "^0.5.15",
 		"@tailwindcss/vite": "^4.1.11",
+		"@types/node": "^24.7.0",
+		"@types/nodemailer": "^7.0.2",
 		"@vitest/browser": "^3.2.3",
 		"autoprefixer": "^10.4.21",
 		"eslint": "^9.18.0",
@@ -48,6 +50,7 @@
 	},
 	"dependencies": {
 		"@rodneylab/svelte-social-icons": "^0.0.31",
-		"@tailwindcss/postcss": "^4.1.11"
+		"@tailwindcss/postcss": "^4.1.11",
+		"nodemailer": "^7.0.9"
 	}
 }
