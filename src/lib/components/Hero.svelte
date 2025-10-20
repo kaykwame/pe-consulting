@@ -18,7 +18,7 @@
 					{heroText[pageTitle].title}
 				</h4>
 				<p
-					class="phone:text-xl tablet:text-xl laptop:text-xl desktop:text-xl mx-auto text-justify font-mono text-sm text-wrap text-gray-50"
+					class="phone:text-xl tablet:text-xl laptop:text-xl desktop:text-xl mx-auto text-left font-mono text-sm text-wrap text-gray-50"
 				>
 					{heroText[pageTitle].description}
 				</p>

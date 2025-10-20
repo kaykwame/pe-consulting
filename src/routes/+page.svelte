@@ -188,7 +188,7 @@
 					class="animate-scroll phone:col-span-1 tablet:col-span-2 laptop:col-span-3 desktop:col-span-3 flex items-center justify-center"
 				>
 					<div>
-						<p class="desktop:text-base text-justify font-mono text-sm text-wrap text-gray-700">
+						<p class="desktop:text-base text-left font-mono text-sm text-wrap text-gray-700">
 							Founded in 2025 by Prince Pappoe, P&E Consulting was created to address a critical
 							gap: Our team is made of brilliant individuals with years of experience in
 							engineering, environmental and business world and noticed that while large
@@ -253,7 +253,7 @@
 							<!-- <ul class="list-inside list-disc text-sm text-gray-800"> -->
 							{#each value.description_text as text}
 								<!-- <li class="py-1">{text}</li> -->
-								<p class="py-1 text-justify text-sm text-gray-500">{text}</p>
+								<p class="py-1 text-left text-sm text-gray-500">{text}</p>
 							{/each}
 							<!-- </ul> -->
 						</div>

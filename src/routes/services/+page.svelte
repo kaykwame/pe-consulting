@@ -151,7 +151,7 @@
 								<!-- <ul class="list-inside list-disc text-sm text-gray-800"> -->
 								{#each value.description_text as text}
 									<!-- <li class="py-1">{text}</li> -->
-									<p class="py-1 text-justify text-sm text-gray-500">{text}</p>
+									<p class="py-1 text-left text-sm text-gray-500">{text}</p>
 								{/each}
 								<!-- </ul> -->
 							</div>

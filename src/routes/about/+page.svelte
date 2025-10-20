@@ -175,7 +175,7 @@
 									{person.name}
 								</p>
 
-								<p class="text-justify text-gray-600">
+								<p class="text-center text-gray-600">
 									{person.bio}
 								</p>
 							</div>
