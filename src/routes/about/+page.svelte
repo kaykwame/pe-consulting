@@ -130,26 +130,28 @@
 		<div
 			class="laptop:grid-cols-2 mx-auto grid max-w-[1120px] min-w-[300px] grid-cols-1 gap-x-10 gap-y-10 px-4"
 		>
-			<!-- About entries column -->
-			<div class="text-gray-600">
-				{#each Object.entries(about) as [title, description]}
-					<div class="mb-8">
-						<p
-							class="phone:text-2xl tablet:text-2xl laptop:text-2xl desktop:text-3xl mb-3 text-center text-2xl font-bold text-gray-700"
-						>
-							{title}
-						</p>
-						<div class="">
-							{#each description as item}
-								<p class="flex justify-center text-justify">
-									{item}
-								</p>
-							{/each}
+			<Card bg="purple" extraClass="p-6">
+				<!-- About entries column -->
+				<div class="text-gray-600">
+					{#each Object.entries(about) as [title, description]}
+						<div class="mb-8">
+							<p
+								class="phone:text-2xl tablet:text-2xl laptop:text-2xl desktop:text-3xl mb-3 text-center text-2xl font-bold text-gray-700"
+							>
+								{title}
+							</p>
+							<div class="">
+								{#each description as item}
+									<p class="flex justify-center text-justify">
+										{item}
+									</p>
+								{/each}
+							</div>
 						</div>
-					</div>
-				{/each}
-			</div>
-			<Card bg="yellow" extraClass="p-6">
+					{/each}
+				</div>
+			</Card>
+			<Card bg="orange" extraClass="p-6">
 				<!-- Images and text column -->
 				<div>
 					<div class="flex flex-col items-center gap-y-8">
