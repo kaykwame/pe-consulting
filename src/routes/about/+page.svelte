@@ -6,6 +6,7 @@
 	import { fade, fly } from 'svelte/transition';
 	import { goto } from '$app/navigation';
 	import Hero from '$lib/components/Hero.svelte';
+	import Card from '$lib/components/cards/Card.svelte';
 
 	let showMobileMenu: boolean = false;
 
@@ -21,7 +22,7 @@
 <div>
 	<section
 		in:fade={{ duration: 1000 }}
-		class="phone:h-[50vh] tablet:h-[60vh] laptop:h-[70vh] desktop:h-[70vh] relative mb-12 h-[60vh] items-center justify-center space-y-12 bg-cover bg-center bg-no-repeat"
+		class="phone:min-h-[80svh] tablet:min-h-[100svh] laptop:min-h-[70vh] desktop:min-h-[70vh] relative mb-12 min-h-[100svh] items-center justify-center space-y-12 bg-cover bg-center bg-no-repeat"
 		style="background-image: url('/images/header-hero-img-4.jpg');"
 	>
 		<!-- <Header {tabs} /> -->
@@ -148,36 +149,38 @@
 					</div>
 				{/each}
 			</div>
-			<!-- Images and text column -->
-			<div>
-				<div class="flex flex-col items-center gap-y-8">
-					{#each people as person}
-						<!-- Example image and text blocks, replace with your own images/text -->
-						<div class="relative w-full">
-							<img
-								src={`/images/about/${person.image}`}
-								alt={person.name}
-								class="phone:h-24 phone:w-24 tablet:h-32 tablet:w-32 laptop:h-44 laptop:w-44 desktop:h-56
+			<Card bg="yellow" extraClass="p-6">
+				<!-- Images and text column -->
+				<div>
+					<div class="flex flex-col items-center gap-y-8">
+						{#each people as person}
+							<!-- Example image and text blocks, replace with your own images/text -->
+							<div class="relative w-full">
+								<img
+									src={`/images/about/${person.image}`}
+									alt={person.name}
+									class="phone:h-24 phone:w-24 tablet:h-32 tablet:w-32 laptop:h-44 laptop:w-44 desktop:h-56
 									desktop:w-56 float-left
 									mt-0
 									mb-4 rounded-full
 									object-cover shadow"
-								style="margin-right: 1rem;"
-							/>
+									style="margin-right: 1rem;"
+								/>
 
-							<p
-								class="phone:pt-0 phone:pb-5 tablet:pt-5 tablet:pb-5 laptop:pt-7 laptop:pb-7 desktop:pt-10 desktop:pb-10 mt-0 mb-0 text-center text-4xl font-bold text-gray-800"
-							>
-								{person.name}
-							</p>
+								<p
+									class="phone:pt-0 phone:pb-5 tablet:pt-5 tablet:pb-5 laptop:pt-7 laptop:pb-7 desktop:pt-10 desktop:pb-10 mt-0 mb-0 text-center text-4xl font-bold text-gray-800"
+								>
+									{person.name}
+								</p>
 
-							<p class="text-justify text-gray-600">
-								{person.bio}
-							</p>
-						</div>
-					{/each}
+								<p class="text-justify text-gray-600">
+									{person.bio}
+								</p>
+							</div>
+						{/each}
+					</div>
 				</div>
-			</div>
+			</Card>
 		</div>
 	</section>
 </div>
