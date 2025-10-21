@@ -7,6 +7,7 @@
 	import about from '$lib/jsondata/about.json';
 	import { goto } from '$app/navigation';
 	import Hero from '$lib/components/Hero.svelte';
+	import ThreeLinesSVG from '$lib/components/SVGs/ThreeLinesSVG.svelte';
 
 	let showMobileMenu: boolean = false;
 
@@ -69,18 +70,7 @@
 							class="laptop:hidden -m-3 p-3"
 						>
 							<span class="sr-only">Open main menu</span>
-							<svg
-								class="h-5 w-5 text-gray-50"
-								viewBox="0 0 20 20"
-								fill="currentColor"
-								aria-hidden="true"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm0 5.25a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z"
-									clip-rule="evenodd"
-								/>
-							</svg>
+							<ThreeLinesSVG />
 						</button>
 						<button
 							on:click={() => goto('/')}

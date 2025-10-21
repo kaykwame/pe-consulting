@@ -4,6 +4,7 @@
 	import Hero from '$lib/components/Hero.svelte';
 	import CloseSVG from '$lib/components/SVGs/CloseSVG.svelte';
 	import EmptyImageSvg from '$lib/components/SVGs/EmptyImageSVG.svelte';
+	import ThreeLinesSVG from '$lib/components/SVGs/ThreeLinesSVG.svelte';
 	import { caseStudies, services, tabsObj } from '$lib/general/helpers';
 	import { showProj } from '$lib/stores/showProjStore';
 	import { onMount } from 'svelte';
@@ -39,20 +40,7 @@
 						class="laptop:hidden -m-3 p-3"
 					>
 						<span class="sr-only">Open main menu</span>
-						<svg
-							class="h-5 w-5 text-gray-50"
-							viewBox="0 0 20 20"
-							fill="currentColor"
-							aria-hidden="true"
-							stroke="currentColor"
-							stroke-width="1"
-						>
-							<path
-								fill-rule="evenodd"
-								d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm0 5.25a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z"
-								clip-rule="evenodd"
-							/>
-						</svg>
+						<ThreeLinesSVG />
 					</button>
 					<button
 						on:click={() => goto('/')}
@@ -127,7 +115,7 @@
 <section
 	class="relative items-center justify-center space-y-12 bg-gray-50 bg-cover bg-center bg-no-repeat pt-8 pb-28"
 >
-	<div class="mx-auto max-w-[1120px] min-w-[300px] px-3">
+	<div class="mx-auto max-w-[1120px] min-w-[300px]">
 		<div>
 			<h1
 				class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-4xl mb-6 text-left text-xl font-bold text-gray-800"
@@ -136,12 +124,12 @@
 			</h1>
 			<div
 				class=" phone:grid-cols-1 tablet:grid-cols-2
-					laptop:grid-cols-3 desktop:grid-cols-3 grid gap-y-8"
+					laptop:grid-cols-3 desktop:grid-cols-3 grid"
 			>
 				{#each Object.entries(caseStudies) as [study, value]}
-					<div class="">
+					<div class="{value.colour} px-2 py-8">
 						<div class="mb-2 flex w-full justify-center">
-							<div
+							<!-- <div
 								class="phone:h-44 phone:w-full tablet:h-44 tablet:w-4/5 laptop:h-48 laptop:w-4/5 desktop:h-52
 									desktop:w-4/5 flex items-center justify-center rounded-sm bg-gray-300 text-center dark:bg-gray-700"
 							>
@@ -154,7 +142,7 @@
 								{:else}
 									<EmptyImageSvg />
 								{/if}
-							</div>
+							</div> -->
 						</div>
 						<div class="tablet:w-4/5 laptop:w-4/5 desktop:w-4/5 mx-auto mb-2 w-full">
 							<div class="mb-1 text-center font-bold text-gray-900">

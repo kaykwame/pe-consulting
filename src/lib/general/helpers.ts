@@ -109,30 +109,35 @@ export const services = {
 
 export const caseStudies = {
 	'Water Contamination Mapping Using GIS (Obuasi, Ghana)': {
+		colour: 'bg-teal-50',
 		image: null,
 		description_text: [
 			'Conducted a spatial analysis of heavy water contamination in affected regions, using GIS and photogrammetry to identify pollution pathways and assess risks to communities. The study demonstrated the role of geospatial data in water management and public health monitoring.'
 		]
 	},
 	'Life Cycle Assessment of Building Materials': {
+		colour: 'bg-orange-50',
 		image: null,
 		description_text: [
 			'Completed a full cradle-to-grave LCA comparing concrete, brick, and structurally insulated panels (SIPs) for single-family housing. The research highlighted the environmental trade-offs of each material, identifying pathways to more sustainable housing construction.'
 		]
 	},
 	'Bowers Rentals Project (Ongoing, P&E Consulting)': {
+		colour: 'bg-blue-50',
 		image: null,
 		description_text: [
 			'Currently leading data collection for a sustainability report covering 150+ rental units (single-family and apartments). The study evaluates energy and water consumption trends, compliance, and opportunities for future sustainability integration.'
 		]
 	},
 	'Corporate Sustainability Experience (Neumann Project)': {
+		colour: 'bg-red-50 bg',
 		image: null,
 		description_text: [
 			'Worked on a corporate initiative integrating sustainability practices into a manufacturing firm’s operations. Focus areas included resource efficiency, waste reduction strategies, and staff engagement in green practices.'
 		]
 	},
 	'Circular Economy Pilot Project': {
+		colour: 'bg-purple-50',
 		image: null,
 		description_text: [
 			'Designed and implemented a pilot initiative exploring material reuse and recycling opportunities. The project aimed at reducing resource inputs while improving environmental performance.'
