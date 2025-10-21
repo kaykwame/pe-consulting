@@ -192,9 +192,9 @@
 					<div class="ml-8 flex h-full w-full items-center justify-center">
 						<!-- svelte-ignore a11y_img_redundant_alt -->
 						<img
-							src="/images/header-hero-img-1 old.jpg"
+							src="/images/logos/logonotplain.png"
 							alt="about us image"
-							class="my-6 h-34 w-full rounded-md object-cover"
+							class="my-6 h-44 w-full rounded-md object-cover"
 						/>
 					</div>
 				</div>
