@@ -176,3 +176,10 @@ export const about = {
 		'Long-Term Impact'
 	]
 };
+
+export const aboutImages = {
+	'Who We Are': 'whoweare.png',
+	'Our Mission': 'ourmission.png',
+	'Our Vision': 'ourvision.png',
+	'Our Values': 'ourvalues.png'
+};

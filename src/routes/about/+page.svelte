@@ -1,12 +1,13 @@
 <script lang="ts">
 	import CloseSVG from '$lib/components/SVGs/CloseSVG.svelte';
-	import { about, people, tabsObj } from '$lib/general/helpers';
+	import { about, aboutImages, people, tabsObj } from '$lib/general/helpers';
 	import { showProj } from '$lib/stores/showProjStore';
 	import { onMount } from 'svelte';
 	import { fade, fly } from 'svelte/transition';
 	import { goto } from '$app/navigation';
 	import Hero from '$lib/components/Hero.svelte';
 	import Card from '$lib/components/cards/Card.svelte';
+	import whoweare from '../../../static/images/icons/whoweare.png?url';
 
 	let showMobileMenu: boolean = false;
 
@@ -135,6 +136,13 @@
 				<div class="text-gray-600">
 					{#each Object.entries(about) as [title, description]}
 						<div class="mb-8">
+							<div class="mb-2 flex justify-center">
+								<img
+									src={`/images/icons/${aboutImages[title]}`}
+									alt={title}
+									class="phone:h-12 phone:w-12 tablet:h-14 tablet:w-14 laptop:h-16 laptop:w-16 desktop:h-20 desktop:w-20 align-middle text-blue-500"
+								/>
+							</div>
 							<p
 								class="phone:text-2xl tablet:text-2xl laptop:text-2xl desktop:text-3xl mb-3 text-center text-2xl font-bold text-gray-700"
 							>
