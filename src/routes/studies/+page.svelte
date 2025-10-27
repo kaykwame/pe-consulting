@@ -118,7 +118,7 @@
 	<div class="mx-auto max-w-[1120px] min-w-[300px]">
 		<div>
 			<h1
-				class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-4xl mb-6 text-left text-xl font-bold text-gray-800"
+				class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-4xl mx-2 mb-6 text-left text-xl font-bold text-gray-800"
 			>
 				Case Studies
 			</h1>
