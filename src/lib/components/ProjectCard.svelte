@@ -8,20 +8,20 @@
 
 <div class="mx-1.5">
 	<div
-		class="shadow-sm hover:shadow-md duration-100 ease-in-out rounded-lg overflow-visible bg-white cursor-pointer hover:scale-105 transition"
+		class="cursor-pointer overflow-visible rounded-lg bg-white shadow-sm transition duration-100 ease-in-out hover:scale-105 hover:shadow-md"
 	>
-		<div class="relative flex flex-col flex-grow-0 justify-start flex-wrap w-full h-full">
+		<div class="relative flex h-full w-full flex-grow-0 flex-col flex-wrap justify-start">
 			<img
-				class="h-[180px] w-full object-cover rounded-lg"
+				class="h-[180px] w-full rounded-lg object-cover"
 				src="{proj['image source']}.png"
 				alt="coverImg"
 			/>
 		</div>
 	</div>
-	<p class="text-center text-base font-mono text-gray-600 mt-2">
+	<p class="mt-2 text-center text-base text-gray-600">
 		{proj['project name']}
 	</p>
-	<p class="whitespace-pre-wrap text-sm font-mono text-gray-600">
+	<p class="text-sm whitespace-pre-wrap text-gray-600">
 		{proj['project description']}
 	</p>
 </div>

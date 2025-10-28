@@ -1,4 +1,5 @@
 <script lang="ts">
+	//bakersville
 	import { goto } from '$app/navigation';
 	import WhiteButton from '$lib/components/buttons/WhiteButton.svelte';
 	import Hero from '$lib/components/Hero.svelte';
@@ -9,7 +10,31 @@
 	import { services, tabsObj } from '$lib/general/helpers';
 	import { showProj } from '$lib/stores/showProjStore';
 	import { onMount } from 'svelte';
-	import { crossfade, draw, fade, fly } from 'svelte/transition';
+	import { crossfade, draw, fade, fly, slide } from 'svelte/transition';
+	import { inView } from '$lib/general/actions';
+
+	let triggered = false;
+
+	const handleInView = () => {
+		triggered = true;
+	};
+	let visible = false;
+	let node: HTMLElement;
+
+	onMount(() => {
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (entry.isIntersecting) {
+					visible = true;
+					observer.unobserve(node);
+				}
+			},
+			{ threshold: 0.1 }
+		);
+
+		observer.observe(node);
+		return () => observer.disconnect();
+	});
 
 	let showMobileMenu: boolean = false;
 	let isVisible = false;
@@ -105,7 +130,7 @@
 									on:click={() => {
 										showMobileMenu = false;
 									}}
-									class="-mx-3 block rounded-lg px-3 py-2 font-mono text-base leading-7 font-semibold text-gray-900 hover:bg-gray-50"
+									class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 font-semibold text-gray-900 hover:bg-gray-50"
 									>{tab}</a
 								>
 							{/each}
@@ -176,7 +201,7 @@
 					class="animate-scroll phone:col-span-1 tablet:col-span-2 laptop:col-span-3 desktop:col-span-3 flex items-center justify-center"
 				>
 					<div>
-						<p class="desktop:text-base text-left font-mono text-sm text-wrap text-gray-700">
+						<p class="desktop:text-base text-left text-sm text-wrap text-gray-700">
 							Founded in 2025 by Prince Pappoe, P&E Consulting was created to address a critical
 							gap: Our team is made of brilliant individuals with years of experience in
 							engineering, environmental and business world and noticed that while large
@@ -207,11 +232,15 @@
 >
 	<div class="mx-auto max-w-[1120px] min-w-[300px] bg-slate-50 px-3">
 		<div>
+			<!-- <div use:inView={{ once: false }} on:focusin={handleInView}> -->
+			<!-- {#if triggered} -->
 			<h1
 				class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-4xl py-8 text-left text-xl font-bold text-gray-800"
 			>
 				Quick Highlights
 			</h1>
+			<!-- {/if} -->
+			<!-- </div> -->
 			<div
 				class=" phone:grid-cols-1 tablet:grid-cols-2
 					laptop:grid-cols-3 desktop:grid-cols-3 grid gap-y-8 py-4"

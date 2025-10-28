@@ -7,9 +7,9 @@
 </script>
 
 <div>
-	<p class="text-center font-semibold font-mono text-gray-600">Projects</p>
+	<p class="text-center font-semibold text-gray-600">Projects</p>
 	<div
-		class="grid grid-cols-1 desktop:grid-cols-2 laptop:grid-cols-2 tablet:grid-cols-2 justify-center"
+		class="desktop:grid-cols-2 laptop:grid-cols-2 tablet:grid-cols-2 grid grid-cols-1 justify-center"
 	>
 		{#each projects as proj}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->

@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 @theme {
@@ -9,22 +8,7 @@
 	--breakpoint-laptop: 1024px;
 	--breakpoint-desktop: 1280px;
 }
-src/global.css body {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 400; /* Regular weight */
-}
 
-/* Optional: Define styles for headings or other elements */
-h1,
-h2,
-h3 {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 700; /* Bold for headings */
-}
-
-p,
-a,
-span {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
+body {
+	font-family: 'Libre Baskerville', Baskerville, serif;
 }
