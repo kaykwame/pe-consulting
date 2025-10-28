@@ -23,7 +23,7 @@ export const heroText: Record<string, { title: string; description: string }> = 
 			'Explore our portfolio of successful projects that demonstrate our expertise in sustainability consulting and the tangible benefits we deliver to our clients.'
 	},
 	about: {
-		title: 'Who We Are:',
+		title: 'Who We Are',
 		description:
 			'P&E Consulting LLC is a sustainability-focused firm dedicated to guiding clients toward environmentally responsible practices that also deliver measurable business value. Founded by professionals with international experience across engineering, business, and sustainability, we blend technical knowledge with practical solutions.'
 	},
