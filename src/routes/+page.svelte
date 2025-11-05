@@ -292,7 +292,9 @@
 					that addresses your specific challenges and objectives.
 				</p>
 				<button
-					on:click={() => goto('/contact')}
+					on:click={() => {
+						goto('/contact');
+					}}
 					class="flex items-center justify-center gap-2 rounded-md px-6 py-3 text-xl font-bold text-white"
 					style="background: linear-gradient(90deg, #fbbf24 0%, #f59e42 100%);"
 				>
