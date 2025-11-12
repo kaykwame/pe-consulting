@@ -286,7 +286,7 @@
 		<div class="flex justify-center">
 			<div class="flex w-full max-w-xl flex-col items-center rounded-md px-8 py-10 shadow-none">
 				<h4 class="mb-4 text-center text-2xl font-bold text-gray-800">Fancy Our Services?</h4>
-				<p class="mb-6 text-center text-gray-600">
+				<p class="mb-6 text-center text-lg text-gray-600">
 					Every business is unique. Let's discuss how we can create a tailored consulting package
 					that addresses your specific challenges and objectives.
 				</p>
