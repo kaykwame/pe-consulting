@@ -152,27 +152,30 @@
 	</div>
 </section>
 <section
-	class="tablet:min-h-[50vh] laptop:min-h-[60vh] desktop:min-h-[70vh] relative flex min-h-[40vh] items-center justify-center bg-gray-100 bg-cover bg-center bg-no-repeat py-8"
+	class="tablet:min-h-[30vh] laptop:min-h-[30vh] desktop:min-h-[70vh] relative flex min-h-[40vh] items-center justify-center bg-gray-100 bg-cover bg-center bg-no-repeat py-8"
 >
 	<!-- <Header {tabs} /> -->
 	<div class="mx-auto max-w-[1120px] min-w-[300px] px-3">
 		<header class="inset-x-0 top-0 z-50 flex h-16 border-b border-gray-100">
 			<div class="mx-auto flex w-full max-w-7xl items-center justify-between">
-				<div class="mx-auto flex items-center justify-center gap-x-5" in:fade={{ duration: 2000 }}>
+				<div
+					class="phone:gap-x-1 tablet:gap-x-5 laptop:gap-x-5 desktop:gap-x-5 mx-auto flex items-center justify-center"
+					in:fade={{ duration: 2000 }}
+				>
 					<WhiteButton
-						extraCss="rounded rounded-md"
+						extraCss="phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg rounded rounded-md"
 						on:click={() => goto('/about')}
 						rounded={false}
 						buttonSize="xl">Learn More</WhiteButton
 					>
 					<WhiteButton
-						extraCss="rounded rounded-md"
+						extraCss="phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg rounded rounded-md"
 						on:click={() => goto('/services')}
 						rounded={false}
 						buttonSize="xl">Our Services</WhiteButton
 					>
 					<WhiteButton
-						extraCss="rounded rounded-md"
+						extraCss="phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg rounded rounded-md"
 						on:click={() => goto('/studies')}
 						rounded={false}
 						buttonSize="xl"
@@ -201,7 +204,9 @@
 					class="animate-scroll phone:col-span-1 tablet:col-span-2 laptop:col-span-3 desktop:col-span-3 flex items-center justify-center"
 				>
 					<div>
-						<p class="desktop:text-base text-left text-sm text-wrap text-gray-700">
+						<p
+							class="phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg text-left text-wrap text-gray-700"
+						>
 							Founded in 2025 by Prince Pappoe, P&E Consulting was created to address a critical
 							gap: Our team is made of brilliant individuals with years of experience in
 							engineering, environmental and business world and noticed that while large
@@ -263,7 +268,11 @@
 								{service}
 							</div>
 							{#each value.description_text as text}
-								<p class="py-1 text-left text-sm text-gray-500">{text}</p>
+								<p
+									class="phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg py-1 text-left text-gray-500"
+								>
+									{text}
+								</p>
 							{/each}
 						</div>
 					</div>
