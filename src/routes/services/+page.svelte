@@ -48,7 +48,7 @@
 						>
 					</div>
 					<nav
-						class="laptop:flex laptop:gap-x-11 laptop:text-sm laptop:font-semibold laptop:leading-6 laptop:text-gray-50 hidden"
+						class="laptop:flex laptop:gap-x-11 phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg laptop:font-semibold laptop:leading-6 laptop:text-gray-50 hidden"
 					>
 						{#each Object.entries(tabsObj) as [key, tab]}
 							<a href="/{tab == 'Home' ? '' : key.toLocaleLowerCase()}">{tab}</a>
@@ -61,7 +61,7 @@
 						<!-- Background backdrop, show/hide based on slide-over state. -->
 						<div class="fixed inset-0 z-50"></div>
 						<div
-							class="tablet:max-w-sm tablet:px-6 tablet:ring-1 tablet:ring-gray-900/10 fixed inset-y-0 left-0 z-50 w-full overflow-y-auto bg-white px-4 pb-6"
+							class="tablet:max-w-sm tablet:px-6 tablet:ring-1 tablet:ring-gray-900/10 fixed inset-y-0 left-0 z-50 w-full overflow-y-auto bg-none px-4 pb-6 backdrop-blur-sm"
 						>
 							<div class="-ml-0.5 flex h-16 items-center gap-x-6">
 								<!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -89,7 +89,7 @@
 										on:click={() => {
 											showMobileMenu = false;
 										}}
-										class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 font-semibold text-gray-900 hover:bg-gray-50"
+										class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 font-semibold text-white"
 										>{tab}</a
 									>
 								{/each}
@@ -141,7 +141,11 @@
 								<!-- <ul class="list-inside list-disc text-sm text-gray-800"> -->
 								{#each value.description_text as text}
 									<!-- <li class="py-1">{text}</li> -->
-									<p class="py-1 text-left text-sm text-gray-500">{text}</p>
+									<p
+										class="phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg py-1 text-left text-gray-500"
+									>
+										{text}
+									</p>
 								{/each}
 								<!-- </ul> -->
 							</div>

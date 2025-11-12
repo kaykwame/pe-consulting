@@ -10,7 +10,9 @@
 			<!-- Brand Section -->
 			<div class="flex flex-col items-center text-center sm:items-start sm:text-left">
 				<h2 class="mb-3 text-xl font-bold sm:text-2xl">P&E Consulting</h2>
-				<p class="max-w-xs text-sm opacity-75">
+				<p
+					class="phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg max-w-xs opacity-75"
+				>
 					Empowering Your Business for a Sustainable Future.
 				</p>
 			</div>
@@ -18,7 +20,7 @@
 			<!-- Navigation Links -->
 			<div class="flex flex-col items-center text-center sm:items-start sm:text-left">
 				<h3 class="mb-3 text-base font-semibold sm:text-lg">Quick Links</h3>
-				<ul class="space-y-2 text-sm">
+				<ul class="phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg space-y-2">
 					<li><a href="/" class="hover:underline">Home</a></li>
 					<li><a href="/about" class="hover:underline">About</a></li>
 					<li><a href="/services" class="hover:underline">Services</a></li>
@@ -29,7 +31,7 @@
 			<!-- Contact Info -->
 			<div class="flex flex-col items-center text-center sm:items-start sm:text-left">
 				<h3 class="mb-3 text-base font-semibold sm:text-lg">Contact Us</h3>
-				<ul class="space-y-2 text-sm">
+				<ul class="phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg space-y-2">
 					<li>
 						<a href="mailto:info@yourbrand.com" class="hover:underline">info@peconsulting.com</a>
 					</li>
@@ -53,7 +55,9 @@
 		</div>
 
 		<!-- Bottom Bar -->
-		<div class="mt-6 border-t border-gray-700 pt-4 text-center text-sm">
+		<div
+			class="phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg mt-6 border-t border-gray-700 pt-4 text-center"
+		>
 			<p>&copy; {new Date().getFullYear()} P&E Consulting. All rights reserved.</p>
 			<div
 				class="mt-2 flex flex-col justify-center space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4"
