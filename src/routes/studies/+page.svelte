@@ -49,7 +49,7 @@
 					>
 				</div>
 				<nav
-					class="laptop:flex laptop:gap-x-11 phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg laptop:font-semibold laptop:leading-6 laptop:text-gray-50 hidden"
+					class="laptop:flex laptop:gap-x-11 laptop:font-semibold laptop:leading-6 laptop:text-gray-50 hidden text-lg"
 				>
 					{#each Object.entries(tabsObj) as [key, tab]}
 						<a href="/{tab == 'Home' ? '' : key.toLocaleLowerCase()}">{tab}</a>
@@ -145,17 +145,13 @@
 							</div> -->
 						</div>
 						<div class="tablet:w-4/5 laptop:w-4/5 desktop:w-4/5 mx-auto mb-2 w-full">
-							<div
-								class="phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg mb-1 text-center font-bold text-gray-900"
-							>
+							<div class="mb-1 text-center text-lg font-bold text-gray-900">
 								{study}
 							</div>
 							<!-- <ul class="list-inside list-disc text-sm text-gray-800"> -->
 							{#each value.description_text as text}
 								<!-- <li class="py-1">{text}</li> -->
-								<p
-									class="phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg py-1 text-left text-gray-800"
-								>
+								<p class="py-1 text-left text-lg text-gray-800">
 									{text}
 								</p>
 							{/each}

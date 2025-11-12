@@ -89,7 +89,7 @@
 					>
 				</div>
 				<nav
-					class="laptop:flex laptop:gap-x-11 phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg laptop:font-semibold laptop:leading-6 laptop:text-gray-50 hidden"
+					class="laptop:flex laptop:gap-x-11 laptop:font-semibold laptop:leading-6 laptop:text-gray-50 hidden text-lg"
 				>
 					{#each Object.entries(tabsObj) as [key, tab]}
 						<a href="/{tab == 'Home' ? '' : key.toLocaleLowerCase()}">{tab}</a>
@@ -163,19 +163,19 @@
 					in:fade={{ duration: 2000 }}
 				>
 					<WhiteButton
-						extraCss="phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg rounded rounded-md"
+						extraCss="text-lg rounded rounded-md"
 						on:click={() => goto('/about')}
 						rounded={false}
 						buttonSize="xl">Learn More</WhiteButton
 					>
 					<WhiteButton
-						extraCss="phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg rounded rounded-md"
+						extraCss="text-lg rounded rounded-md"
 						on:click={() => goto('/services')}
 						rounded={false}
 						buttonSize="xl">Our Services</WhiteButton
 					>
 					<WhiteButton
-						extraCss="phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg rounded rounded-md"
+						extraCss="text-lg rounded rounded-md"
 						on:click={() => goto('/studies')}
 						rounded={false}
 						buttonSize="xl"
@@ -204,9 +204,7 @@
 					class="animate-scroll phone:col-span-1 tablet:col-span-2 laptop:col-span-3 desktop:col-span-3 flex items-center justify-center"
 				>
 					<div>
-						<p
-							class="phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg text-left text-wrap text-gray-700"
-						>
+						<p class="text-left text-lg text-wrap text-gray-700">
 							Founded in 2025 by Prince Pappoe, P&E Consulting was created to address a critical
 							gap: Our team is made of brilliant individuals with years of experience in
 							engineering, environmental and business world and noticed that while large
@@ -264,12 +262,12 @@
 							</div>
 						</div>
 						<div class="tablet:w-4/5 laptop:w-4/5 desktop:w-4/5 mx-auto mb-2 w-full">
-							<div class="mb-1 text-center font-bold text-gray-900">
+							<div class="mb-1 text-center text-lg font-bold text-gray-900">
 								{service}
 							</div>
 							{#each value.description_text as text}
 								<p
-									class=" text- phone:text-lg tablet:text-lg laptop:text-lg desktop:text-lg py-1 text-left text-gray-500"
+									class="phone:text-lg tablet:text-lg laptop:text-lg desktop:text-lg py-1 text-left text-gray-500"
 								>
 									{text}
 								</p>

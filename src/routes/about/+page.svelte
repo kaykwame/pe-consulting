@@ -49,7 +49,7 @@
 						>
 					</div>
 					<nav
-						class="laptop:flex laptop:gap-x-11 phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg laptop:font-semibold laptop:leading-6 laptop:text-gray-50 hidden"
+						class="laptop:flex laptop:gap-x-11 laptop:font-semibold laptop:leading-6 laptop:text-gray-50 hidden text-lg"
 					>
 						{#each Object.entries(tabsObj) as [key, tab]}
 							<a href="/{tab == 'Home' ? '' : key.toLocaleLowerCase()}">{tab}</a>
@@ -140,9 +140,7 @@
 							</p>
 							<div class="">
 								{#each description as item}
-									<p
-										class="phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg flex justify-center text-justify"
-									>
+									<p class="flex justify-center text-justify text-lg">
 										{item}
 									</p>
 								{/each}
@@ -175,9 +173,7 @@
 									{person.name}
 								</p>
 
-								<p
-									class="phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg text-center text-gray-600"
-								>
+								<p class="text-center text-lg text-gray-600">
 									{person.bio}
 								</p>
 

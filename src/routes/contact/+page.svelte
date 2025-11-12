@@ -79,7 +79,7 @@
 						>
 					</div>
 					<nav
-						class="laptop:flex laptop:gap-x-11 phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg laptop:font-semibold laptop:leading-6 laptop:text-gray-50 hidden"
+						class="laptop:flex laptop:gap-x-11 laptop:font-semibold laptop:leading-6 laptop:text-gray-50 hidden text-lg"
 					>
 						{#each Object.entries(tabsObj) as [key, tab]}
 							<a href="/{tab == 'Home' ? '' : key.toLocaleLowerCase()}">{tab}</a>
@@ -163,11 +163,7 @@
 				on:submit|preventDefault={handleSubmit}
 			>
 				<div class="mb-4">
-					<label
-						for="name"
-						class="phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg mb-1 block font-medium text-gray-700"
-						>Name</label
-					>
+					<label for="name" class="mb-1 block text-lg font-medium text-gray-700">Name</label>
 					<input
 						id="name"
 						name="name"
@@ -178,11 +174,7 @@
 					/>
 				</div>
 				<div class="mb-4">
-					<label
-						for="email"
-						class="phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg mb-1 block font-medium text-gray-700"
-						>Email</label
-					>
+					<label for="email" class="mb-1 block text-lg font-medium text-gray-700">Email</label>
 					<input
 						id="email"
 						name="email"
@@ -193,11 +185,7 @@
 					/>
 				</div>
 				<div class="mb-4">
-					<label
-						for="message"
-						class="phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg mb-1 block font-medium text-gray-700"
-						>Message</label
-					>
+					<label for="message" class="mb-1 block text-lg font-medium text-gray-700">Message</label>
 					<textarea
 						id="message"
 						name="message"
@@ -208,7 +196,7 @@
 				</div>
 				<button
 					type="submit"
-					class="phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg w-full rounded bg-blue-600 px-4 py-2 text-white transition hover:bg-blue-700"
+					class="w-full rounded bg-blue-600 px-4 py-2 text-lg text-white transition hover:bg-blue-700"
 					disabled={submitting}
 				>
 					Send Message
