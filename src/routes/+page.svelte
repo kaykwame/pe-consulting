@@ -269,7 +269,7 @@
 							</div>
 							{#each value.description_text as text}
 								<p
-									class="phone:text-base tablet:text-lg laptop:text-lg desktop:text-lg py-1 text-left text-gray-500"
+									class=" text- phone:text-lg tablet:text-lg laptop:text-lg desktop:text-lg py-1 text-left text-gray-500"
 								>
 									{text}
 								</p>
