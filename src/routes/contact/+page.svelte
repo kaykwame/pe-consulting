@@ -159,11 +159,11 @@
 			<form
 				class="mx-auto w-full max-w-lg rounded-lg bg-white p-4 shadow-md sm:p-6"
 				method="POST"
-				action="https://formcarry.com/s/TZxdKq6uxCs"
-				enctype="multipart/form-data"
+				action="https://formcarry.com/s/NNGEz5TUEKM"
+				on:submit|preventDefault={handleSubmit}
 			>
 				<div class="mb-4">
-					<label for="name" class="mb-1 block text-sm font-medium text-gray-700">Your Name</label>
+					<label for="name" class="mb-1 block text-sm font-medium text-gray-700">Name</label>
 					<input
 						id="name"
 						name="name"
@@ -174,7 +174,7 @@
 					/>
 				</div>
 				<div class="mb-4">
-					<label for="email" class="mb-1 block text-sm font-medium text-gray-700">Your Email</label>
+					<label for="email" class="mb-1 block text-sm font-medium text-gray-700">Email</label>
 					<input
 						id="email"
 						name="email"
@@ -197,6 +197,7 @@
 				<button
 					type="submit"
 					class="w-full rounded bg-blue-600 px-4 py-2 text-white transition hover:bg-blue-700"
+					disabled={submitting}
 				>
 					Send Message
 				</button>

@@ -215,10 +215,9 @@
 					class="tablet:col-span-1 laptop:col-span-1 desktop:col-span-1 tablet:flex hidden items-center justify-center"
 				>
 					<div class="ml-8 flex h-full w-full items-center justify-center">
-						<!-- svelte-ignore a11y_img_redundant_alt -->
 						<img
 							src="/images/logos/logonotplain.png"
-							alt="about us image"
+							alt="P&E Consulting logo"
 							class="my-6 h-44 w-full rounded-md object-cover"
 						/>
 					</div>
@@ -232,15 +231,11 @@
 >
 	<div class="mx-auto max-w-[1120px] min-w-[300px] bg-slate-50 px-3">
 		<div>
-			<!-- <div use:inView={{ once: false }} on:focusin={handleInView}> -->
-			<!-- {#if triggered} -->
 			<h1
 				class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-4xl py-8 text-left text-xl font-bold text-gray-800"
 			>
 				Quick Highlights
 			</h1>
-			<!-- {/if} -->
-			<!-- </div> -->
 			<div
 				class=" phone:grid-cols-1 tablet:grid-cols-2
 					laptop:grid-cols-3 desktop:grid-cols-3 grid gap-y-8 py-4"
@@ -267,12 +262,9 @@
 							<div class="mb-1 text-center font-bold text-gray-900">
 								{service}
 							</div>
-							<!-- <ul class="list-inside list-disc text-sm text-gray-800"> -->
 							{#each value.description_text as text}
-								<!-- <li class="py-1">{text}</li> -->
 								<p class="py-1 text-left text-sm text-gray-500">{text}</p>
 							{/each}
-							<!-- </ul> -->
 						</div>
 					</div>
 				{/each}
