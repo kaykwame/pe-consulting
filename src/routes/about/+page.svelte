@@ -133,9 +133,7 @@
 									class="phone:h-12 phone:w-12 tablet:h-14 tablet:w-14 laptop:h-16 laptop:w-16 desktop:h-20 desktop:w-20 align-middle text-blue-500"
 								/>
 							</div>
-							<p
-								class="phone:text-2xl tablet:text-2xl laptop:text-2xl desktop:text-3xl mb-3 text-center text-2xl font-bold text-gray-700"
-							>
+							<p class="mb-3 text-center text-2xl font-bold text-gray-700">
 								{title}
 							</p>
 							<div class="">

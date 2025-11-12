@@ -135,7 +135,7 @@
 								</div>
 							</div>
 							<div class="tablet:w-4/5 laptop:w-4/5 desktop:w-4/5 mx-auto mb-2 w-full">
-								<div class="mb-1 text-center font-bold text-gray-900">
+								<div class="mb-1 text-center text-2xl font-bold text-gray-900">
 									{service}
 								</div>
 								<!-- <ul class="list-inside list-disc text-sm text-gray-800"> -->
