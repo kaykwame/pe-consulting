@@ -130,18 +130,10 @@
 									on:click={() => {
 										showMobileMenu = false;
 									}}
-									class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 font-semibold text-white"
+									class="-mx-3 block rounded-lg px-3 py-2 text-lg leading-7 font-semibold text-white"
 									>{tab}</a
 								>
 							{/each}
-							<!-- <a
-									href="/"
-									on:click={() => {
-										showMobileMenu = false;
-									}}
-									class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 font-semibold text-gray-900 hover:bg-gray-50"
-									>Home</a
-								> -->
 						</div>
 					</div>
 				</div>
@@ -159,26 +151,26 @@
 		<header class="inset-x-0 top-0 z-50 flex h-16 border-b border-gray-100">
 			<div class="mx-auto flex w-full max-w-7xl items-center justify-between">
 				<div
-					class="phone:gap-x-1 tablet:gap-x-5 laptop:gap-x-5 desktop:gap-x-5 mx-auto flex items-center justify-center"
+					class="phone:gap-x-1 tablet:gap-x-5 laptop:gap-x-5 desktop:gap-x-5 mx-auto flex items-center justify-center text-2xl"
 					in:fade={{ duration: 2000 }}
 				>
 					<WhiteButton
-						extraCss="text-lg rounded rounded-md"
+						extraCss="rounded rounded-md"
 						on:click={() => goto('/about')}
 						rounded={false}
-						buttonSize="xl">Learn More</WhiteButton
+						buttonSize="2xl">Learn More</WhiteButton
 					>
 					<WhiteButton
-						extraCss="text-lg rounded rounded-md"
+						extraCss="rounded rounded-md"
 						on:click={() => goto('/services')}
 						rounded={false}
-						buttonSize="xl">Our Services</WhiteButton
+						buttonSize="2xl">Our Services</WhiteButton
 					>
 					<WhiteButton
-						extraCss="text-lg rounded rounded-md"
+						extraCss="rounded rounded-md"
 						on:click={() => goto('/studies')}
 						rounded={false}
-						buttonSize="xl"
+						buttonSize="2xl"
 					>
 						Case Studies</WhiteButton
 					>

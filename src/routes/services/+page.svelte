@@ -89,7 +89,7 @@
 										on:click={() => {
 											showMobileMenu = false;
 										}}
-										class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 font-semibold text-white"
+										class="-mx-3 block rounded-lg px-3 py-2 text-lg leading-7 font-semibold text-white"
 										>{tab}</a
 									>
 								{/each}

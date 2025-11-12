@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let buttonSize: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
+	export let buttonSize: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' = 'md';
 	export let disabled = false;
 	export let extraCss = '';
 	export let rounded = true;
@@ -24,7 +24,9 @@
 							? 'px-3 py-2 text-sm font-semibold'
 							: buttonSize === 'xl'
 								? 'px-3.5 py-2.5 text-sm font-semibold'
-								: ''
+								: buttonSize === '2xl'
+									? 'px-4 py-3 text-lg font-semibold'
+									: ''
 		} ${extraCss} flex gap-1 ${rounded ? 'rounded-md' : ''} border bg-white text-gray-700 shadow-sm ${
 			disabled ? '' : 'hover:bg-gray-100'
 		}   focus:ring-energyblue-500 transition focus:ring-2 focus:ring-offset-2  focus:outline-none`}
