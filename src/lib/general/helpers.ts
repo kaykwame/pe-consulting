@@ -150,6 +150,7 @@ export const people = [
 		name: 'Prince Pappoe',
 		title: 'Founder & Principal Consultant',
 		image: 'Pappoe.jpg',
+		years: '4+ Years',
 		bio: [
 			'Prince is the founder and principal consultant at P&E Consulting LLC. With a background in environmental engineering and international experience, he brings a unique blend of technical expertise and practical business acumen to the firm.'
 		]
@@ -158,10 +159,20 @@ export const people = [
 		name: 'Emmanuel Adu-Ohene',
 		title: 'Sustainability Analyst',
 		image: 'Ohene.jpg',
+		years: '4+ Years',
 		bio: [
 			'Ohene is a sustainability analyst at P&E Consulting LLC. He specializes in environmental policy and has a strong background in data analysis and project management.'
 		]
 	}
+	// {
+	// 	name: 'Kwame Gyampoh',
+	// 	title: 'CTO',
+	// 	image: 'Gyampoh.jpg',
+	// 	years: '4+ Years',
+	// 	bio: [
+	// 		'Kwame is the Chief Technology Officer at P&E Consulting LLC. He brings extensive experience in technology strategy and implementation, driving innovation and digital transformation within the firm.'
+	// 	]
+	// }
 ];
 
 export const about = {

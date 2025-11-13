@@ -24,7 +24,7 @@
 <div>
 	<section
 		in:fade={{ duration: 1000 }}
-		class="phone:min-h-[80svh] tablet:min-h-[100svh] laptop:min-h-[70vh] desktop:min-h-[70vh] relative mb-12 min-h-[100svh] items-center justify-center space-y-12 bg-cover bg-center bg-no-repeat"
+		class="phone:min-h-[80svh] tablet:min-h-[100svh] laptop:min-h-[70vh] desktop:min-h-[70vh] relative min-h-[100svh] items-center justify-center space-y-12 bg-cover bg-center bg-no-repeat"
 		style="background-image: url('/images/header-hero-img-4.jpg');"
 	>
 		<!-- <Header {tabs} /> -->
@@ -109,72 +109,58 @@
 		</div>
 	</section>
 
-	<section class="mb-10">
-		<div
-			class="laptop:grid-cols-2 mx-auto grid max-w-[1120px] min-w-[300px] grid-cols-1 gap-x-10 gap-y-10 px-4"
-		>
-			<Card bg="purple" extraClass="p-6">
-				<!-- About entries column -->
-				<div class="text-gray-600">
-					{#each Object.entries(about) as [title, description]}
-						<div class="mb-8">
-							<div class="mb-2 flex justify-center">
-								<img
-									src={`/images/icons/${aboutImages[title]}`}
-									alt={title}
-									class="phone:h-12 phone:w-12 tablet:h-14 tablet:w-14 laptop:h-16 laptop:w-16 desktop:h-20 desktop:w-20 align-middle text-blue-500"
-								/>
-							</div>
-							<p class="mb-3 text-center text-2xl font-bold text-gray-700">
-								{title}
+	<section class="bg-gray-100/45 py-16">
+		<div class="laptop:grid-cols-2 mx-auto grid max-w-[1120px] grid-cols-1 gap-x-10 gap-y-10 px-4">
+			{#each Object.entries(about) as [title, description]}
+				<Card extraClass="col-span-1 px-8 py-6" bg="blue">
+					<div class="flex justify-center">
+						<img
+							src={`/images/icons/${aboutImages[title]}`}
+							alt={title}
+							class="phone:h-12 phone:w-12 tablet:h-14 tablet:w-14 laptop:h-16 laptop:w-16 desktop:h-20 desktop:w-20 align-middle text-blue-500"
+						/>
+					</div>
+					<p class="mb-3 text-center text-2xl font-bold text-gray-700">
+						{title}
+					</p>
+					<div class="">
+						{#each description as item}
+							<p class="flex justify-center text-center text-lg text-gray-500">
+								{item}
 							</p>
-							<div class="">
-								{#each description as item}
-									<p class="flex justify-center text-justify text-lg">
-										{item}
-									</p>
-								{/each}
-							</div>
-						</div>
-					{/each}
-				</div>
-			</Card>
-			<Card bg="orange" extraClass="p-6">
-				<!-- Images and text column -->
-				<div>
-					<div class="flex flex-col items-center gap-y-8">
-						{#each people as person}
-							<!-- Example image and text blocks, replace with your own images/text -->
-							<div class="relative w-full">
-								<img
-									src={`/images/about/${person.image}`}
-									alt={person.name}
-									class="phone:h-24 phone:w-24 tablet:h-32 tablet:w-32 laptop:h-44 laptop:w-44 desktop:h-56
-									desktop:w-56 float-left
-									mt-0
-									mb-4 rounded-full
-									object-cover shadow"
-									style="margin-right: 1rem;"
-								/>
-
-								<p
-									class="phone:pt-0 phone:pb-5 tablet:pt-5 tablet:pb-5 laptop:pt-7 laptop:pb-7 desktop:pt-10 desktop:pb-10 mt-0 mb-0 text-center text-4xl font-bold text-gray-800"
-								>
-									{person.name}
-								</p>
-
-								<p class="text-center text-lg text-gray-600">
-									{person.bio}
-								</p>
-
-								{#if person !== people[people.length - 1]}
-									<hr class="mt-6 border-0 border-t border-gray-400" />
-								{/if}
-							</div>
 						{/each}
 					</div>
-				</div>
-			</Card>
+				</Card>
+			{/each}
+		</div>
+	</section>
+	<section class=" bg-white pt-12 pb-20">
+		<p class="mb-8 text-center text-4xl font-bold text-gray-800">Meet Our Expert Consultants</p>
+		<hr class="gull mx-auto mb-8 w-[80%] border-t-2 border-yellow-500" />
+		<div class="laptop:grid-cols-2 mx-auto grid max-w-[1120px] grid-cols-1 gap-x-10 gap-y-10 px-4">
+			{#each Object.values(people) as person}
+				<Card extraClass="col-span-1 px-8 py-6">
+					<div class="flex flex-col items-center gap-y-4">
+						<img
+							src={`/images/about/${person.image}`}
+							alt={person.name}
+							class="phone:h-24 phone:w-24 tablet:h-32 tablet:w-32 laptop:h-44 laptop:w-44 desktop:h-56 desktop:w-56 rounded-full object-cover shadow"
+						/>
+						<p class="text-center text-3xl font-bold text-gray-800">
+							{person.name}
+						</p>
+						<p class="text-center text-xl font-semibold text-gray-700">
+							{person.title}
+						</p>
+						<p class="text-center text-base font-normal text-gray-500">
+							{person.years}
+						</p>
+						<p class="text-center text-lg text-gray-500">
+							{person.bio}
+						</p>
+					</div>
+				</Card>
+			{/each}
 		</div>
 	</section>
 </div>

@@ -33,8 +33,8 @@
 					<li>
 						<a href="mailto:info@yourbrand.com" class="hover:underline">info@peconsulting.com</a>
 					</li>
-					<li><a href="tel:+1234567890" class="hover:underline">+1 (234) 000-000</a></li>
-					<li class="max-w-xs">Address: ....</li>
+					<li><a href="tel:+1234567890" class="hover:underline">+1 (2217) 512-0746</a></li>
+					<!-- <li class="max-w-xs">Address: ....</li> -->
 				</ul>
 				<div class="mt-2 flex items-center gap-x-3">
 					{#each socialMediaLinks as smLink}
