@@ -63,7 +63,6 @@
 </svelte:head>
 
 <section
-	in:fade={{ duration: 1000 }}
 	class="phone:min-h-[80svh] tablet:min-h-[100svh] laptop:min-h-[70vh] desktop:min-h-[70vh] items-center justify-center space-y-12 bg-cover bg-center bg-no-repeat"
 	style="background-image: url('/images/header-hero-img-1.jpg');"
 >
@@ -152,7 +151,6 @@
 			<div class="mx-auto flex w-full max-w-7xl items-center justify-between">
 				<div
 					class="phone:gap-x-1 tablet:gap-x-5 laptop:gap-x-5 desktop:gap-x-5 mx-auto flex items-center justify-center text-2xl"
-					in:fade={{ duration: 2000 }}
 				>
 					<WhiteButton
 						extraCss="rounded rounded-md"
@@ -183,7 +181,6 @@
 			>
 				<div
 					class="animate-on-scroll col-span-4"
-					in:fly={{ x: -100, duration: 800, delay: isVisible ? 0 : 200 }}
 				>
 					<h1
 						class="phone:text-2xl tablet:text-2xl laptop:text-3xl desktop:text-4xl mb-8 text-left text-xl font-bold text-gray-700"
@@ -192,7 +189,6 @@
 					</h1>
 				</div>
 				<div
-					in:fly={{ x: 100, duration: 800, delay: isVisible ? 0 : 200 }}
 					class="animate-scroll phone:col-span-1 tablet:col-span-2 laptop:col-span-3 desktop:col-span-3 flex items-center justify-center"
 				>
 					<div>

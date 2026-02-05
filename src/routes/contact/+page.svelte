@@ -53,7 +53,6 @@
 </svelte:head>
 <div>
 	<section
-		in:fade={{ duration: 1000 }}
 		class="phone:min-h-[80svh] tablet:min-h-[100svh] laptop:min-h-[70vh] desktop:min-h-[70vh] items-center justify-center space-y-12 bg-cover bg-center bg-no-repeat"
 		style="background-image: url('/images/header-hero-img-0.jpg');"
 	>
@@ -188,7 +187,7 @@
 				</div>
 				<button
 					type="submit"
-					class="w-full rounded bg-blue-600 px-4 py-2 text-lg text-white transition hover:bg-blue-700"
+					class="w-full rounded bg-blue-600 px-4 py-2 text-lg text-white  hover:bg-blue-700"
 					disabled={submitting}
 				>
 					Send Message

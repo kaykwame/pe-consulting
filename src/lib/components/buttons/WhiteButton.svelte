@@ -29,7 +29,7 @@
 									: ''
 		} ${extraCss} flex gap-1 ${rounded ? 'rounded-md' : ''} border bg-white text-gray-700 shadow-sm ${
 			disabled ? '' : 'hover:bg-gray-100'
-		}   focus:ring-energyblue-500 transition focus:ring-2 focus:ring-offset-2  focus:outline-none`}
+		}   focus:ring-energyblue-500  focus:ring-2 focus:ring-offset-2  focus:outline-none`}
 		><slot name="svg" /><slot /></button
 	>
 </div>
